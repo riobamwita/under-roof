@@ -110,19 +110,20 @@ body {
 
 /* SEARCH BOX */
 .search-box {
-    background: rgba(255, 255, 255, 0.18); /* transparent glass */
+    width: 100%;
+    max-width: 100%;
+    
+    background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
 
-    padding: 22px;
+    padding: 18px;
     border-radius: 14px;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 10px;
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
 }
 
 /* Inputs */
@@ -151,6 +152,14 @@ body {
 .search-box button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* prevent overflow */
+.search-box input,
+.search-box select,
+.search-box button {
+    width: 100%;
+    min-width: 0; /* 🔥 VERY IMPORTANT FIX */
 }
 
 /* SECTIONS */
@@ -400,33 +409,26 @@ footer {
     }
 
     .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-        position: relative;
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .contact-card {
-        flex-direction: column;
-        justify-content: center;
-        padding: 16px;
-        border-radius: 16px;
-        height: 100px;
+        flex-direction: row;
+        align-items: center;
+        padding: 14px;
+        border-radius: 12px;
+        height: auto;
 
-        color: #222;
-        font-weight: 500;
-
-        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        transition: transform 0.25s ease;
+        font-size: 13px;
     }
 
-    .contact-card:active {
-        transform: scale(0.96);
+    .contact-card span {
+        font-size: 14px;
     }
 
-    .contact-card img {
-        width: 26px;
-        margin-bottom: 10px;
+    .contact-card p {
+        font-size: 12px;
     }
 
     /* ===== THE WOW STRUCTURE ===== */
@@ -441,50 +443,6 @@ footer {
 
         transform: translateY(0);
         z-index: 2;
-    }
-
-    /* WHATSAPP – FLOATING ABOVE */
-    .contact-card:nth-child(2) {
-        background: linear-gradient(135deg, #25d366, #128c7e);
-        color: #fff;
-
-        transform: translateY(-25px);
-        z-index: 3;
-    }
-
-    /* EMAIL – OFFSET DOWN */
-    .contact-card:nth-child(3) {
-        background: linear-gradient(135deg, #ffb74d, #fb8c00);
-        color: #fff;
-
-        transform: translateY(10px);
-    }
-
-    /* INSTAGRAM */
-    .contact-card:nth-child(4) {
-        background: linear-gradient(135deg, #f09433, #e6683c, #dc2743);
-        color: #fff;
-
-        transform: translateY(-10px);
-    }
-
-    /* FACEBOOK */
-    .contact-card:nth-child(5) {
-        background: linear-gradient(135deg, #1877f2, #3b5998);
-        color: #fff;
-
-        transform: translateY(5px);
-    }
-
-    /* LOCATION – BASE CARD */
-    .contact-card:nth-child(6) {
-        grid-column: span 2;
-        height: 90px;
-
-        background: linear-gradient(135deg, #757575, #424242);
-        color: #fff;
-
-        transform: translateY(15px);
     }
 }
 
@@ -771,7 +729,7 @@ footer {
         padding: 8px 14px;
         font-size: 12px;
     }
-}
+
 
 @media (max-width: 480px) {
     h1 {
@@ -980,3 +938,13 @@ footer {
         font-size: 12px;
     }
 }
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* kills horizontal scroll */
+}
+
+* {
+    max-width: 100%;
+}
+
