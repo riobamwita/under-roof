@@ -86,17 +86,15 @@ const contactBtn = document.getElementById("openContact");
 const contactSection = document.querySelector(".contact");
 
 window.addEventListener("scroll", () => {
-    const rect = contactSection.getBoundingClientRect();
 
-    const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-    if (inView) {
+    if (window.scrollY > 300) {
         scrollBtn.classList.add("show");
         contactBtn.classList.add("show");
     } else {
         scrollBtn.classList.remove("show");
         contactBtn.classList.remove("show");
     }
+
 });
 
 // scroll to top

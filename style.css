@@ -307,6 +307,7 @@ body {
 }
 .floating-contact {
     bottom: 80px;
+    opacity: 1;
 }
 
 .floating-top {
@@ -379,40 +380,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 🔥 2 columns */
-        gap: 12px;
-    }
-
-    .contact-card {
-        flex-direction: column; /* better fit for small cards */
-        align-items: center;
-        text-align: center;
-        padding: 14px;
-    }
-
-    .contact-card span {
-        font-size: 14px;
-    }
-
-    .contact-card p {
-        font-size: 12px;
-    }
-
-    /* ===== THE WOW STRUCTURE ===== */
-
-    /* CALL – HERO CARD */
-    .contact-card:nth-child(1) {
-        grid-column: span 2;
-        height: 130px;
-
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-        color: #fff;
-
-        transform: translateY(0);
-        z-index: 2;
-    }
 }
 
 /* ABOUT PAGE */
@@ -752,74 +719,6 @@ footer {
     font-size: 14px;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
-@media (max-width: 768px) {
-
-    .contact {
-        padding: 50px 18px;
-    }
-
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .contact-left h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .contact-left p {
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    .contact-card {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-
-        padding: 16px;
-        border-radius: 14px;
-
-        background: #ffffff;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-
-        transition: transform 0.2s ease;
-    }
-
-    .contact-card:active {
-        transform: scale(0.97);
-    }
-
-    .contact-card img {
-        width: 26px;
-        height: 26px;
-    }
-
-    .contact-card span {
-        font-size: 14px;
-    }
-
-    .contact-card p {
-        font-size: 12px;
-    }
-
-    /* Right info box */
-    .contact-right {
-        border-radius: 14px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .contact-right h3 {
-        font-size: 18px;
-    }
-}
-
 html, body {
     width: 100%;
     overflow-x: hidden; /* kills horizontal scroll */
@@ -962,4 +861,68 @@ h2 {
 
 .newsletter {
     box-shadow: inset 0 0 80px rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 50px 15px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* ✅ FORCE 2x3 GRID */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding: 14px;
+        border-radius: 12px;
+
+        background: #fff;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-card img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-card span {
+        font-size: 13px;
+    }
+
+    .contact-card p {
+        font-size: 11px;
+    }
+
+    /* Optional: make first card wide */
+    .contact-card:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .contact-right {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
 }
