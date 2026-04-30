@@ -466,3 +466,189 @@ footer {
         left: 20px;
     }
 }
+
+/* =========================
+   FULL MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 120px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .search-box button {
+        grid-column: span 1;
+    }
+
+    /* INTRO TEXT */
+    .intro-text {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* ACCORDION */
+    .accordion-header {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .accordion-body {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+        padding: 40px 20px;
+    }
+
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subscribe input {
+        width: 100%;
+    }
+
+    .subscribe button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-left h2 {
+        font-size: 22px;
+    }
+
+    .contact-card {
+        padding: 12px;
+    }
+
+    .contact-card img {
+        width: 25px;
+    }
+
+    .contact-right {
+        text-align: center;
+    }
+
+    /* FLOATING BUTTONS */
+    .floating-contact,
+    .floating-top {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        right: 15px;
+    }
+
+    .floating-contact {
+        bottom: 70px;
+    }
+
+    .floating-top {
+        bottom: 15px;
+    }
+
+    /* MODAL */
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    /* ABOUT PAGE FIXES */
+    .about-page {
+        padding: 80px 15px 40px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .image-placeholder {
+        height: 250px;
+        font-size: 14px;
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px !important;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+}
