@@ -663,6 +663,7 @@ footer {
         font-size: 22px;
     }
 }
+}
 
 /* =========================
    CONTACT SECTION (NEW)
@@ -846,8 +847,6 @@ h1 {
 
 h2 {
     font-size: clamp(18px, 4vw, 32px);
-}
-
 }
 
 .newsletter {
