@@ -293,3 +293,28 @@ function showFilterBar(type, category, location, bedrooms, count) {
     });
 }
 
+function showComingSoon() {
+    const popup = document.getElementById("comingSoonPopup");
+
+    popup.classList.add("active");
+
+    setTimeout(() => {
+        popup.classList.remove("active");
+    }, 2000); // disappears after 2 seconds
+}
+
+// TARGET BUTTONS
+document.querySelectorAll(
+    ".view-btn, .more-btn, .more-properties button, .subscribe button"
+).forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showComingSoon();
+    });
+});
+
+document.querySelectorAll(".like-icon").forEach(icon => {
+    icon.addEventListener("click", () => {
+        icon.classList.toggle("liked");
+    });
+});

@@ -979,11 +979,6 @@ footer {
         border-radius: 12px;
     }
 
-    .featured-icons img {
-        width: 18px;
-        height: 18px;
-    }
-
     /* ================= ACCORDION ================= */
     .accordion-header {
         font-size: 14px;
@@ -1359,4 +1354,81 @@ footer {
     display: flex;
 }
 
+}
+
+/* COMING SOON POPUP */
+.coming-soon {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.coming-soon.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.coming-soon-box {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+
+    padding: 20px 40px;
+    border-radius: 14px;
+
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+    from {
+        transform: translateY(10px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .featured-icons {
+        padding: 4px 6px !important;
+        gap: 4px !important;
+        border-radius: 10px !important;
+    }
+
+    .featured-icons img {
+        width: 12px !important;
+        height: 12px !important;
+        transform: none !important;
+    }
+}
+
+.like-icon {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* liked state */
+.like-icon.liked {
+    filter: invert(22%) sepia(98%) saturate(7472%) hue-rotate(357deg) brightness(95%) contrast(118%);
+    transform: scale(1.15);
 }
