@@ -54,40 +54,43 @@
         <h1>The Right Property Awaits</h1>
 
         <div class="search-box">
-            <select>
-                <option value="">Property Type</option>
-                <option>Apartment</option>
-                <option>House</option>
-                <option>Land</option>
-                <option>Warehouse</option>
-            </select>
 
-            <select>
-                <option value="">Category</option>
-                <option>Sale</option>
-                <option>Rent</option>
-            </select>
+    <select id="typeFilter">
+        <option value="">Property Type</option>
+        <option value="apartment">Apartment</option>
+        <option value="house">House</option>
+        <option value="land">Land</option>
+    </select>
 
-            <select>
-                <option value="">Location</option>
-            </select>
+    <select id="categoryFilter">
+        <option value="">Category</option>
+        <option value="sale">Sale</option>
+        <option value="rent">Rent</option>
+        <option value="airbnb">Airbnb</option>
+    </select>
 
-            <select>
-                <option value="">Bedrooms</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+    <select id="locationFilter">
+        <option value="">Location</option>
+        <option value="nairobi">Nairobi</option>
+        <option value="diani">Diani</option>
+        <option value="kenol">Kenol</option>
+        <option value="matuu">Matuu</option>
+    </select>
 
-            <input type="text" placeholder="Min Price">
-            <input type="text" placeholder="Max Price">
-            <input type="text" placeholder="Property ID">
-            <input type="text" placeholder="Keyword">
+    <select id="bedroomFilter">
+        <option value="">Bedrooms</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
 
-            <button>Search</button>
-        </div>
+    <input id="minPrice" type="number" placeholder="Min Price">
+    <input id="maxPrice" type="number" placeholder="Max Price">
+    <input id="keyword" type="text" placeholder="Keyword">
+
+    <button id="searchBtn" class="btn">Search</button>
+
+</div>
     </div>
 </section>
 
@@ -102,7 +105,7 @@
             <img src="assets/kenol.jpg" alt="Kenol">
             <div class="property-overlay">
                 <h3>Kenol</h3>
-                <button class="view-btn">View</button>
+                <button class="view-btn btn">View</button>
             </div>
         </div>
 
@@ -111,7 +114,7 @@
             <img src="assets/matuu.jpeg" alt="Matuu">
             <div class="property-overlay">
                 <h3>Matuu</h3>
-                <button class="view-btn">View</button>
+                <button class="view-btn btn">View</button>
             </div>
         </div>
 
@@ -120,7 +123,7 @@
             <img src="assets/diani.jpeg" alt="Diani">
             <div class="property-overlay">
                 <h3>Diani</h3>
-                <button class="view-btn">View</button>
+                <button class="view-btn btn">View</button>
             </div>
         </div>
 
@@ -129,14 +132,14 @@
             <img src="assets/background.jpg" alt="Nairobi">
             <div class="property-overlay">
                 <h3>Nairobi</h3>
-                <button class="view-btn">View</button>
+                <button class="view-btn btn">View</button>
             </div>
         </div>
 
     </div>
 
     <div class="more-properties">
-    <button class="more-btn">More Locations</button>
+    <button class="more-btn btn">More Locations</button>
     </div>
 
 </section>
@@ -145,25 +148,42 @@
 <section class="section featured-section">
     <h2>Featured Properties</h2>
 
+    <div id="activeFilters" class="active-filters"></div>
+
     <div class="featured-grid">
 
         <!-- Property 1 -->
-        <div class="featured-card">
-            <img src="assets/living1.jpg" alt="Featured Property">
-            <div class="featured-badge">AIRBnB</div>
-            <div class="featured-info">
-                <h3>2 Bedroom AirBnB - Nairobi</h3>
-                <p>Ksh 12,400 / N</p>
-            </div>
-            <div class="featured-icons">
-            <img src="assets/likeicon.png" alt="Like">
-            <img src="assets/photosicon.png" alt="Photos">
-            <img src="assets/shareicon.png" alt="Share">
-            </div>
-        </div>
+        <div class="featured-card"
+     data-type="apartment"
+     data-category="airbnb"
+     data-location="nairobi"
+     data-bedrooms="2"
+     data-price="12400">
 
+    <img src="assets/living1.jpg" alt="Featured Property">
+
+    <div class="featured-badge">AIRBnB</div>
+
+    <div class="featured-info">
+        <h3>2 Bedroom AirBnB - Nairobi</h3>
+        <p>Ksh 12,400 / N</p>
+    </div>
+
+    <div class="featured-icons">
+        <img src="assets/likeicon.png" alt="Like">
+        <img src="assets/photosicon.png" alt="Photos">
+        <img src="assets/shareicon.png" alt="Share">
+    </div>
+
+</div>
         <!-- Property 2 -->
-        <div class="featured-card">
+        <div id="activeFilters" class="active-filters"></div>
+        <div class="featured-card"
+     data-type="house"
+     data-category="sale"
+     data-location="diani"
+     data-bedrooms="3"
+     data-price="7000000">
             <img src="assets/diani.jpeg" alt="Featured Property">
             <div class="featured-badge">FOR SALE</div>
             <div class="featured-info">
@@ -178,7 +198,12 @@
         </div>
 
         <!-- Property 3 -->
-        <div class="featured-card">
+        <div class="featured-card"
+     data-type="house"
+     data-category="sale"
+     data-location="kenol"
+     data-bedrooms="3"
+     data-price="4200000">
             <img src="assets/kenolhouse.jpg" alt="Featured Property">
             <div class="featured-badge">HOT DEAL</div>
             <div class="featured-info">
@@ -193,7 +218,12 @@
         </div>
 
         <!-- Property 4 -->
-        <div class="featured-card">
+        <div class="featured-card"
+     data-type="land"
+     data-category="sale"
+     data-location="matuu"
+     data-bedrooms="1"
+     data-price="3800000">
             <img src="assets/matuu.jpeg" alt="Featured Property">
             <div class="featured-badge">FOR SALE</div>
             <div class="featured-info">
@@ -208,7 +238,12 @@
         </div>
 
         <!-- Property 5 -->
-        <div class="featured-card">
+        <div class="featured-card"
+     data-type="house"
+     data-category="rent"
+     data-location="nairobi"
+     data-bedrooms="2"
+     data-price="102400">
             <img src="assets/background.jpg" alt="Featured Property">
             <div class="featured-badge">FOR RENT</div>
             <div class="featured-info">
@@ -223,7 +258,12 @@
         </div>
 
         <!-- Property 6 -->
-        <div class="featured-card">
+        <div class="featured-card"
+     data-type="house"
+     data-category="sale"
+     data-location="diani"
+     data-bedrooms="3"
+     data-price="15000000">
             <img src="assets/dianihouse.jpg" alt="Featured Property">
             <div class="featured-badge">FOR SALE</div>
             <div class="featured-info">
@@ -237,11 +277,13 @@
             </div>
         </div>
         
+        </div>
+        
         <div class="more-properties">
     <button class="more-btn">View More</button>
     </div>
 
-    </div>
+    
 </section>
 
 <!-- BENEFITS -->
@@ -351,7 +393,7 @@
 
         <div class="subscribe">
             <input type="email" placeholder="Enter your email">
-            <button>Get Updates</button>
+            <button class="btn">Get Updates</button>
         </div>
     </div>
 </section>

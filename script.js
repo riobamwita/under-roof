@@ -183,3 +183,113 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(adStrip);
+
+// ================= SEARCH FUNCTION =================
+function runFilter() {
+
+    const type = document.getElementById("typeFilter").value.toLowerCase();
+    const category = document.getElementById("categoryFilter").value.toLowerCase();
+    const location = document.getElementById("locationFilter").value.toLowerCase();
+    const bedrooms = document.getElementById("bedroomFilter").value;
+    const minPrice = document.getElementById("minPrice").value;
+    const maxPrice = document.getElementById("maxPrice").value;
+    const keyword = document.getElementById("keyword").value.toLowerCase();
+
+    const cards = document.querySelectorAll(".featured-card");
+
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+
+        const cardType = card.dataset.type;
+        const cardCategory = card.dataset.category;
+        const cardLocation = card.dataset.location;
+        const cardBedrooms = card.dataset.bedrooms;
+        const cardPrice = parseInt(card.dataset.price);
+        const cardText = card.innerText.toLowerCase();
+
+        let show = true;
+
+        if (type && cardType !== type) show = false;
+        if (category && cardCategory !== category) show = false;
+        if (location && cardLocation !== location) show = false;
+        if (bedrooms && cardBedrooms !== bedrooms) show = false;
+
+        if (minPrice && cardPrice < parseInt(minPrice)) show = false;
+        if (maxPrice && cardPrice > parseInt(maxPrice)) show = false;
+
+        if (keyword && !cardText.includes(keyword)) show = false;
+
+        if (show) {
+            card.style.display = "block";
+            visibleCount++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    // scroll to results
+    document.querySelector(".featured-section").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    // show active filters
+    showFilterBar(type, category, location, bedrooms, visibleCount);
+}
+
+
+// ================= BUTTON CLICK =================
+document.getElementById("searchBtn").addEventListener("click", runFilter);
+
+
+// ================= LIVE FILTER (AUTO) =================
+document.querySelectorAll(".search-box select, .search-box input")
+.forEach(el => {
+    el.addEventListener("input", runFilter);
+});
+
+
+// ================= FILTER BAR =================
+function showFilterBar(type, category, location, bedrooms, count) {
+
+    const container = document.getElementById("activeFilters");
+
+    let filters = [];
+
+    if (type) filters.push(`Type: ${type}`);
+    if (category) filters.push(`Category: ${category}`);
+    if (location) filters.push(`Location: ${location}`);
+    if (bedrooms) filters.push(`Bedrooms: ${bedrooms}`);
+
+    // nothing selected → hide bar
+    if (filters.length === 0) {
+        container.innerHTML = "";
+        return;
+    }
+
+    container.innerHTML = `
+        <div class="filter-bar">
+            <span>${filters.join(" | ")} (${count} results)</span>
+            <button id="clearFilters">View All</button>
+        </div>
+    `;
+
+    // CLEAR FILTERS BUTTON
+    document.getElementById("clearFilters").addEventListener("click", () => {
+
+        // reset inputs
+        document.querySelectorAll(".search-box select").forEach(s => s.value = "");
+        document.querySelectorAll(".search-box input").forEach(i => i.value = "");
+
+        // show all cards
+        document.querySelectorAll(".featured-card").forEach(card => {
+            card.style.display = "block";
+        });
+
+        container.innerHTML = "";
+
+        // scroll stays in place (optional)
+    });
+}
+
