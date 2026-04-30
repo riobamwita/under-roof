@@ -776,13 +776,7 @@ footer {
         text-align: center;
         font-size: 14px;
     }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
+    
     .contact-card {
         display: flex;
         align-items: center;
