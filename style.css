@@ -281,7 +281,7 @@ body {
 /* NEWSLETTER */
 .newsletter {
     background: var(--bg-dark);
-    padding: 40px 8%;
+    padding: 20px 8%;
 
     display: flex;
     justify-content: center;
@@ -982,7 +982,7 @@ footer {
 
     /* ================= NEWSLETTER ================= */
     .newsletter {
-        padding: 50px 16px;
+        padding: 20px 16px;
     }
 
     .newsletter h2 {
