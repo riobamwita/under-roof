@@ -1189,3 +1189,130 @@ footer {
     transform: translateY(-2px);
     background: linear-gradient(135deg, var(--primary-light), var(--primary));
 }
+
+@media (max-width: 768px) {
+
+    /* GLOBAL SCALE DOWN */
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        zoom: 1; /* remove desktop zoom effect */
+    }
+
+    /* HEADINGS */
+    h1 {
+        font-size: 22px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    h3 {
+        font-size: 14px !important;
+    }
+
+    p {
+        font-size: 12px !important;
+    }
+
+    /* SECTION SPACING */
+    .section {
+        padding: 20px 12px !important;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    /* SEARCH BOX */
+    .search-box {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .search-box input,
+    .search-box select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .search-box button {
+        width: 140px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* PROPERTY CARDS */
+    .property-card {
+        height: 160px;
+    }
+
+    .property-overlay h3 {
+        font-size: 13px;
+    }
+
+    /* FEATURED */
+    .featured-card {
+        height: 180px;
+    }
+
+    .featured-info h3 {
+        font-size: 12px;
+    }
+
+    .featured-info p {
+        font-size: 11px;
+    }
+
+    /* ICONS */
+    .featured-icons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* BUTTONS */
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .more-btn {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    /* CONTACT */
+    .contact-left h2 {
+        font-size: 18px;
+    }
+
+    .contact-card {
+        padding: 10px;
+    }
+
+    .contact-card span {
+        font-size: 12px;
+    }
+
+    .contact-card p {
+        font-size: 11px;
+    }
+
+    /* NEWSLETTER */
+    .newsletter h2 {
+        font-size: 18px;
+    }
+
+    .newsletter p {
+        font-size: 12px;
+    }
+
+    /* ADS */
+    .ad-strip img {
+        height: 220px;
+    }
+}
