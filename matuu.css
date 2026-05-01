@@ -35,7 +35,8 @@ body{
     inset:0;
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;   /* 🔥 no stretching */
+    background:black;     /* fills empty space nicely */
 }
 
 .overlay{
