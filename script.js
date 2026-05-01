@@ -326,13 +326,92 @@ const popup = document.getElementById("comingSoonPopup");
 // Select all featured cards
 const featuredCards = document.querySelectorAll(".featured-card");
 
-featuredCards.forEach(card => {
-    card.addEventListener("click", () => {
-        popup.classList.add("active");
+document.querySelectorAll(".featured-card").forEach(card => {
+    card.addEventListener("click", (e) => {
 
-        // hide after 2 seconds
+        // prevent triggering when clicking icons
+        if (e.target.closest(".featured-icons")) return;
+
+        const link = card.dataset.link;
+
+        // ✅ if card has a real link → navigate
+        if (link) {
+            window.location.href = link;
+            return;
+        }
+
+        // ❌ otherwise show coming soon
+        e.preventDefault();
+        showComingSoon();
+    });
+});
+
+// FADE-IN ON LOAD
+const elements = document.querySelectorAll(".fade-in");
+
+window.addEventListener("load", () => {
+    elements.forEach((el, i) => {
         setTimeout(() => {
-            popup.classList.remove("active");
-        }, 2000);
+            el.classList.add("show");
+        }, i * 150);
+    });
+});
+
+
+// IMAGE LIGHTBOX
+const images = document.querySelectorAll(".gallery img");
+
+const lightbox = document.createElement("div");
+lightbox.classList.add("lightbox");
+
+const lightImg = document.createElement("img");
+
+lightbox.appendChild(lightImg);
+document.body.appendChild(lightbox);
+
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.classList.add("active");
+        lightImg.src = img.src;
+    });
+});
+
+lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+});
+
+
+// SMOOTH SCROLL (robust)
+document.querySelectorAll('a[href]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+
+        const href = this.getAttribute('href');
+
+        // ignore empty or placeholder links
+        if (!href || href === '#') return;
+
+        // allow full page navigation (external links, tel, mail, real pages)
+        if (
+            href.startsWith('http') ||
+            href.startsWith('mailto:') ||
+            href.startsWith('tel:') ||
+            href.endsWith('.html')
+        ) {
+            return;
+        }
+
+        // only handle in-page anchors (#section)
+        if (href.startsWith('#')) {
+            const target = document.querySelector(href);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
