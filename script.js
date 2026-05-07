@@ -13,6 +13,17 @@ function isFiltered() {
     return hasValue;
 }
 
+// ================= SCROLL TO FEATURED =================
+function scrollToFeatured() {
+    const featuredSection = document.getElementById("featured");
+
+    if (!featuredSection) return;
+
+    window.scrollTo({
+        top: featuredSection.offsetTop - 100,
+        behavior: "smooth"
+    });
+}
 
 // ================= NAVIGATION SCROLL =================
 document.querySelectorAll('.navbar nav a').forEach(link => {
@@ -192,10 +203,10 @@ function runFilter() {
         if (show) visibleCount++;
     });
 
-    document.querySelector(".featured-section")
-        .scrollIntoView({ behavior: "smooth" });
-
     showFilterBar(type, category, location, bedrooms, visibleCount);
+
+scrollToFeatured();
+
 }
 
 
@@ -259,22 +270,25 @@ function showComingSoon() {
 
 // ================= LOCATION CARDS =================
 document.querySelectorAll(".location-card").forEach(card => {
+
     card.addEventListener("click", () => {
 
         const location = card.dataset.location;
 
-        document.getElementById("featured")
-            .scrollIntoView({ behavior: "smooth" });
-
-        document.querySelectorAll(".featured-card").forEach(p => {
-            p.style.display = (p.dataset.location === location) ? "block" : "none";
-        });
-
+        // Reset search inputs first
         document.querySelectorAll(".search-box select, .search-box input")
             .forEach(el => el.value = "");
 
-        document.getElementById("activeFilters").innerHTML = "";
+        // Set selected location in filter
+        document.getElementById("locationFilter").value = location;
+
+        // Run normal filter system
+        runFilter();
+
+        // Scroll properly
+        scrollToFeatured();
     });
+
 });
 
 
@@ -296,8 +310,12 @@ document.querySelectorAll(".featured-section .more-btn").forEach(btn => {
 
         if (isFiltered()) {
             resetAllFilters();
-            document.getElementById("featured")
-                .scrollIntoView({ behavior: "smooth" });
+            const featured = document.getElementById("featured");
+
+window.scrollTo({
+    top: featured.offsetTop - 80,
+    behavior: "smooth"
+});
         } else {
             showComingSoon();
         }
@@ -312,11 +330,15 @@ document.querySelectorAll(".like-icon").forEach(icon => {
     });
 });
 
-
 // ================= FEATURED CARD NAVIGATION =================
 document.querySelectorAll(".featured-card").forEach(card => {
+
+    // SKIP location cards
+    if (card.classList.contains("location-card")) return;
+
     card.addEventListener("click", (e) => {
 
+        // Ignore icon clicks
         if (e.target.closest(".featured-icons")) return;
 
         const link = card.dataset.link;
@@ -327,4 +349,5 @@ document.querySelectorAll(".featured-card").forEach(card => {
             showComingSoon();
         }
     });
+
 });
