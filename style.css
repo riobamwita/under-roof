@@ -1314,27 +1314,37 @@ footer {
 
 @media (max-width: 768px) {
 
+    .ad-strip-section {
+        overflow: hidden;
+        padding: 10px 0;
+    }
+
     .ad-strip {
         display: flex;
-        flex-wrap: nowrap;        /* keep in one row */
-        overflow-x: auto;         /* enable horizontal scroll */
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+
         gap: 12px;
-        padding: 10px 0;
+        padding: 10px 12px;
+        width: 100%;
 
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none; /* Firefox */
     }
 
     .ad-strip img {
-        flex: 0 0 auto;           /* prevent shrinking */
-        width: 240px;            /* fixed card width */
-        height: 320px;           /* adjust for mobile */
+        flex: 0 0 auto;
+        width: 240px;
+        height: 320px;
         object-fit: cover;
 
         scroll-snap-align: start;
+        border-radius: 0;
     }
 
-    /* optional: hide scrollbar */
     .ad-strip::-webkit-scrollbar {
         display: none;
     }
