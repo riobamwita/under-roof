@@ -585,86 +585,99 @@ document.addEventListener("DOMContentLoaded", () => {
         strip.addEventListener("pointerdown", hideHint, { passive: true });
     });
 
-    // ================= CONTACT FORM VALIDATION =================
-    const contactForm = document.getElementById("contactForm");
+// ================= SOUNDS =================
+let clickSound = null;
+let errorSound = null;
 
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", function(e) {
-
-            e.preventDefault();
-
-            const name =
-                document.getElementById("name")?.value.trim();
-
-            const email =
-                document.getElementById("email")?.value.trim();
-
-            const phone =
-                document.getElementById("phone")?.value.trim();
-
-            const message =
-                document.getElementById("message")?.value.trim();
-
-            // EMPTY CHECK
-            if (!name || !email || !phone || !message) {
-
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            // EMAIL VALIDATION
-            const emailPattern =
-                /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
-
-            if (!email.match(emailPattern)) {
-
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            // PHONE VALIDATION
-            const phonePattern = /^[0-9]{10}$/;
-
-            if (!phone.match(phonePattern)) {
-
-                alert("Please enter a valid 10-digit phone number.");
-                return;
-            }
-
-            // SUCCESS
-            alert("Message sent successfully!");
-
-            contactForm.reset();
-        });
-    }
-
+// initialize AFTER page loads
+document.addEventListener("DOMContentLoaded", () => {
+    clickSound = document.getElementById("clickSound");
+    errorSound = document.getElementById("errorSound");
 });
 
-// ================= BUTTON CLICK SOUNDS + VIBRATION =================
-const clickSound = document.getElementById("clickSound");
+// vibration helper
+function vibrate(pattern) {
+    if ("vibrate" in navigator) {
+        navigator.vibrate(pattern);
+    }
+}
 
-function feedback() {
-    // SOUND
+// play click
+function playClickSound() {
     if (clickSound) {
         clickSound.currentTime = 0;
         clickSound.play().catch(() => {});
     }
-
-    // VIBRATION (mobile only)
-    if ("vibrate" in navigator) {
-        navigator.vibrate(20);
-    }
 }
 
-// SEARCH BUTTON
+// play error
+function playErrorSound() {
+    if (errorSound) {
+        errorSound.currentTime = 0;
+        errorSound.play().catch(() => {});
+    }
+    vibrate([200, 100, 200]);
+}
+
+// ================= BUTTON CLICKS =================
 const searchButton = document.getElementById("searchBtn");
 
 if (searchButton) {
-    searchButton.addEventListener("click", feedback);
+    searchButton.addEventListener("click", playClickSound);
 }
 
-// ALL MORE BUTTONS
 document.querySelectorAll(".more-btn").forEach(btn => {
-    btn.addEventListener("click", feedback);
+    btn.addEventListener("click", playClickSound);
+});
+
+// ================= CONTACT FORM (CLEAN VERSION) =================
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("contactForm");
+
+    if (!form) return;
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const messageInput = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = nameInput?.value.trim() || "";
+        const email = emailInput?.value.trim() || "";
+        const phone = phoneInput?.value.trim() || "";
+        const message = messageInput?.value.trim() || "";
+
+        // EMPTY CHECK
+        if (!name || !email || !phone || !message) {
+            if (typeof playErrorSound === "function") playErrorSound();
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // EMAIL VALIDATION
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+        if (!emailPattern.test(email)) {
+            if (typeof playErrorSound === "function") playErrorSound();
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // PHONE VALIDATION
+        const phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone)) {
+            if (typeof playErrorSound === "function") playErrorSound();
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+        }
+
+        // SUCCESS
+        if (typeof playClickSound === "function") playClickSound();
+
+        alert("Message sent successfully!");
+        form.reset();
+    });
+});
 });
