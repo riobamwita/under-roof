@@ -934,18 +934,6 @@ footer {
         text-align: center;
     }
 
-    /* ================= ADS (2 COLUMN GRID FEEL) ================= */
-    .ad-strip {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .ad-strip img {
-        width: 100%;
-        height: 280px;
-    }
-
     /* ================= FLOATING BUTTONS ================= */
     .floating-contact,
     .floating-top {
@@ -1211,11 +1199,6 @@ footer {
         font-size: 11px;
     }
 
-    /* ADS */
-    .ad-strip img {
-        height: 220px;
-    }
-
     .footer-content {
     flex-direction: column;
     gap: 6px;
@@ -1327,4 +1310,32 @@ footer {
 
 .featured-card{
     transition:0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .ad-strip {
+        display: flex;
+        flex-wrap: nowrap;        /* keep in one row */
+        overflow-x: auto;         /* enable horizontal scroll */
+        gap: 12px;
+        padding: 10px 0;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .ad-strip img {
+        flex: 0 0 auto;           /* prevent shrinking */
+        width: 240px;            /* fixed card width */
+        height: 320px;           /* adjust for mobile */
+        object-fit: cover;
+
+        scroll-snap-align: start;
+    }
+
+    /* optional: hide scrollbar */
+    .ad-strip::-webkit-scrollbar {
+        display: none;
+    }
 }
