@@ -953,13 +953,6 @@ footer {
         font-size: 12px;
     }
 
-    /* icons */
-    .featured-icons {
-        gap: 6px;
-        padding: 6px 8px;
-        border-radius: 12px;
-    }
-
     /* ================= ACCORDION ================= */
     .accordion-header {
         font-size: 14px;
@@ -1044,20 +1037,6 @@ footer {
 .featured-info p {
     font-size: 12px;
     text-align: left;
-}
-
-/* ICONS RIGHT SIDE */
-.featured-icons {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-
-    padding: 6px 8px;
-    border-radius: 12px;
 }
 
 }
@@ -1224,12 +1203,6 @@ footer {
         font-size: 11px;
     }
 
-    /* ICONS */
-    .featured-icons img {
-        width: 16px;
-        height: 16px;
-    }
-
     /* BUTTONS */
     .btn {
         padding: 8px 16px;
@@ -1338,21 +1311,6 @@ footer {
     to {
         transform: translateY(0) scale(1);
         opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .featured-icons {
-        padding: 4px 6px !important;
-        gap: 4px !important;
-        border-radius: 10px !important;
-    }
-
-    .featured-icons img {
-        width: 12px !important;
-        height: 12px !important;
-        transform: none !important;
     }
 }
 
@@ -1490,4 +1448,42 @@ footer {
         opacity: 0;
         pointer-events: none;
     }
+}
+
+/* ================= MOBILE FEATURED ICONS VERTICAL ================= */
+@media (max-width: 768px) {
+
+    .featured-icons {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+        display: flex;
+        flex-direction: column !important; /* vertical */
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px !important;
+
+        padding: 6px 5px !important;
+
+        border-radius: 14px !important;
+
+        z-index: 5;
+    }
+
+    .featured-icons img {
+        width: 20px !important;
+        height: 20px !important;
+
+        display: block;
+    }
+
+    /* Prevent text overlap */
+    .featured-info {
+        max-width: 70%;
+        padding-right: 38px;
+    }
+
 }
