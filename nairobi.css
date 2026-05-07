@@ -1,18 +1,18 @@
 :root{
-    --bg:#081c15;
+    --bg:#061a1a;
     --card:rgba(255,255,255,0.05);
     --border:rgba(255,255,255,0.08);
     --text:#e6f4ea;
     --muted:#a8b3c7;
-    --primary:#1E7A3A;
-    --accent:#d4af37;
+    --primary:#0ea5a4;   /* teal theme */
+    --accent:#fbbf24;    /* gold highlight */
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Poppins,sans-serif;
+    font-family:Poppins, sans-serif;
 }
 
 body{
@@ -21,7 +21,7 @@ body{
     overflow-x:hidden;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
     height:60vh;
     position:relative;
@@ -35,7 +35,7 @@ body{
     inset:0;
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:cover; /* best for rental house images */
 }
 
 .overlay{
@@ -73,7 +73,7 @@ body{
     font-size:12px;
 }
 
-/* BACK BUTTON */
+/* ================= BACK BUTTON ================= */
 .back-btn{
     position:absolute;
     top:20px;
@@ -87,14 +87,22 @@ body{
     cursor:pointer;
 }
 
-/* BUTTON */
+/* ================= BUTTONS ================= */
 .btn{
     padding:12px 18px;
     border:none;
     border-radius:30px;
-    background:linear-gradient(135deg,var(--primary),#0f3f22);
+    background:linear-gradient(135deg,var(--primary),#064e4e);
     color:white;
     cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    display:inline-block;
+    text-align:center;
+}
+
+.btn:hover{
+    transform:scale(1.05);
 }
 
 .btn.full{
@@ -102,7 +110,7 @@ body{
     margin-top:10px;
 }
 
-/* MAIN */
+/* ================= MAIN LAYOUT ================= */
 .property-details{
     display:grid;
     grid-template-columns:1.3fr 1fr;
@@ -110,11 +118,11 @@ body{
     padding:40px;
 }
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 .gallery{
     display:grid;
-    grid-template-columns:2fr 1fr;
-    grid-template-rows:200px 200px;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-auto-rows:180px;
     gap:12px;
 }
 
@@ -136,7 +144,7 @@ body{
     filter:brightness(1.1);
 }
 
-/* DETAILS */
+/* ================= DETAILS ================= */
 .details{
     display:flex;
     flex-direction:column;
@@ -148,6 +156,7 @@ body{
     border:1px solid var(--border);
     padding:18px;
     border-radius:14px;
+    backdrop-filter:blur(10px);
 }
 
 .card h3{
@@ -155,7 +164,8 @@ body{
     margin-bottom:8px;
 }
 
-.card p, .card ul{
+.card p,
+.card ul{
     font-size:14px;
     color:var(--muted);
 }
@@ -168,7 +178,7 @@ body{
     margin-bottom:6px;
 }
 
-/* LIGHTBOX */
+/* ================= LIGHTBOX ================= */
 .lightbox{
     position:fixed;
     inset:0;
@@ -194,7 +204,7 @@ body{
     cursor:pointer;
 }
 
-/* FLOAT BUTTON */
+/* ================= FLOAT BUTTON ================= */
 .floating-contact{
     position:fixed;
     bottom:20px;
@@ -203,28 +213,22 @@ body{
     height:55px;
     background:var(--primary);
     border-radius:50%;
-    
     display:flex;
     align-items:center;
     justify-content:center;
-
     font-size:22px;
     color:#fff;
-
-    text-decoration:none;   /* 🔥 removes link styling */
-    border:none;
-    outline:none;
-
+    text-decoration:none;
     box-shadow:0 6px 20px rgba(0,0,0,0.3);
     transition:0.3s;
 }
 
 .floating-contact:hover{
     transform:scale(1.1);
-    background:#145c2b;
+    background:#0b7c7a;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media(max-width:900px){
 
     .hero{
@@ -239,45 +243,11 @@ body{
 
     .gallery{
         grid-template-columns:1fr 1fr;
-        grid-template-rows:150px 150px 150px;
+        grid-auto-rows:150px;
     }
 
     .gallery img:first-child{
         grid-column:span 2;
         grid-row:span 1;
     }
-}
-
-a.btn{
-    text-decoration:none;
-    display:inline-block;
-    text-align:center;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:12px;
-}
-
-/* Make first image bigger */
-.gallery img:first-child{
-    grid-column:span 2;
-    grid-row:span 2;
-}
-
-/* All images */
-.gallery img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:12px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-/* Hover */
-.gallery img:hover{
-    transform:scale(1.03);
-    filter:brightness(1.1);
 }

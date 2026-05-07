@@ -1324,3 +1324,7 @@ footer {
     filter: invert(22%) sepia(98%) saturate(7472%) hue-rotate(357deg) brightness(95%) contrast(118%);
     transform: scale(1.15);
 }
+
+.featured-card{
+    transition:0.3s ease;
+}

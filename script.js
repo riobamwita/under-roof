@@ -279,19 +279,9 @@ function showFilterBar(type, category, location, bedrooms, count) {
     // CLEAR FILTERS BUTTON
     document.getElementById("clearFilters").addEventListener("click", () => {
 
-        // reset inputs
-        document.querySelectorAll(".search-box select").forEach(s => s.value = "");
-        document.querySelectorAll(".search-box input").forEach(i => i.value = "");
+    resetAllFilters();
 
-        // show all cards
-        document.querySelectorAll(".featured-card").forEach(card => {
-            card.style.display = "block";
-        });
-
-        container.innerHTML = "";
-
-        // scroll stays in place (optional)
-    });
+});
 }
 
 function showComingSoon() {
@@ -329,20 +319,19 @@ const featuredCards = document.querySelectorAll(".featured-card");
 document.querySelectorAll(".featured-card").forEach(card => {
     card.addEventListener("click", (e) => {
 
-        // prevent triggering when clicking icons
+        // ignore icon clicks
         if (e.target.closest(".featured-icons")) return;
 
         const link = card.dataset.link;
 
-        // ✅ if card has a real link → navigate
+        // ONLY navigate if link exists
         if (link) {
-            window.location.href = link;
-            return;
-        }
+    window.location.href = link;
+} else {
+    showComingSoon();
+}
 
-        // ❌ otherwise show coming soon
-        e.preventDefault();
-        showComingSoon();
+        // ❌ NO coming soon for empty cards anymore
     });
 });
 
@@ -413,5 +402,67 @@ document.querySelectorAll('a[href]').forEach(anchor => {
                 block: 'start'
             });
         }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const locationCards = document.querySelectorAll(".location-card");
+    const propertyCards = document.querySelectorAll(".featured-section .featured-card");
+
+    locationCards.forEach(card => {
+        card.addEventListener("click", () => {
+
+            const location = card.dataset.location;
+
+            // scroll to featured section
+            document.getElementById("featured").scrollIntoView({ behavior: "smooth" });
+
+            propertyCards.forEach(property => {
+                const propLocation = property.dataset.location;
+
+                if (propLocation === location) {
+                    property.style.display = "block";
+                } else {
+                    property.style.display = "none";
+                }
+            });
+
+            // OPTIONAL: clear search filters UI so they don't conflict
+            document.querySelectorAll(".search-box select, .search-box input")
+                .forEach(el => el.value = "");
+
+            document.getElementById("activeFilters").innerHTML = "";
+        });
+    });
+
+});
+
+function resetAllFilters() {
+
+    // reset search inputs
+    document.querySelectorAll(".search-box select, .search-box input")
+        .forEach(el => el.value = "");
+
+    // show all featured cards
+    document.querySelectorAll(".featured-section .featured-card")
+        .forEach(card => {
+            card.style.display = "block";
+        });
+
+    // clear filter bar
+    document.getElementById("activeFilters").innerHTML = "";
+}
+
+// VIEW MORE BUTTON (REPLACE your current handler)
+document.querySelectorAll(".more-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        resetAllFilters();
+
+        document.getElementById("featured").scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });

@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1 Acre Land - Matuu</title>
 
-<link rel="stylesheet" href="matuu.css">
+<title>2 Bedroom House - Nairobi</title>
+
+<link rel="stylesheet" href="nairobi.css">
+
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -14,24 +17,32 @@
 
 <!-- HERO -->
 <section class="hero">
-    <img src="assets/matuu.jpeg" class="hero-img">
+
+    <img src="assets/living4.jpg" class="hero-img">
 
     <div class="overlay"></div>
 
     <button class="back-btn" onclick="goBack()">← Back</button>
 
     <div class="hero-content">
-        <h1>Land – Matuu</h1>
-        <p class="price">Ksh 3,800,000</p>
+
+        <h1>2 Bedroom House – Nairobi</h1>
+
+        <p class="price">Ksh 102,400 / Month</p>
 
         <div class="hero-meta">
-            <span>📍 Matuu</span>
-            <span>📐 1 Hectare</span>
-            <span>🚧 Ready for Development</span>
+            <span>🛏 2 Beds</span>
+            <span>🛁 2 Baths</span>
+            <span>🏡 Modern Design</span>
+            <span>🔐 Secure Estate</span>
         </div>
 
-        <a href="https://wa.me/254740531831" class="btn">Book Viewing</a>
+        <a href="https://wa.me/254740531831" class="btn">
+            Book Viewing
+        </a>
+
     </div>
+
 </section>
 
 <!-- MAIN -->
@@ -39,7 +50,14 @@
 
     <!-- GALLERY -->
     <div class="gallery">
-        <img src="assets/matuu.jpeg">
+
+        <img src="assets/living4.jpg">
+        <img src="assets/bedroom4.jpg">
+        <img src="assets/sbedroom4.jpg">
+        <img src="assets/kitchen4.jpg">
+        <img src="assets/bathroom4.jpg">
+        <img src="assets/balcony4.jpg">
+
     </div>
 
     <!-- DETAILS -->
@@ -47,33 +65,40 @@
 
         <div class="card">
             <h3>Property Overview</h3>
+
             <p>
-                Prime 1-hectare parcel located in Matuu. Ideal for residential or
-                investment development with good road access and a growing neighborhood.
+                Modern 2-bedroom rental house located in Nairobi.
+                Designed for comfort and convenience with spacious rooms,
+                natural lighting, and a calm secure environment ideal for families or professionals.
             </p>
         </div>
 
         <div class="card">
-            <h3>Key Features</h3>
+            <h3>Features</h3>
+
             <ul>
-                <li>Flat and ready for construction</li>
-                <li>Accessible via all-weather road</li>
-                <li>Water and electricity nearby</li>
-                <li>Secure and developing area</li>
-                <li>Ideal for subdivision or farming</li>
+                <li>2 Spacious Bedrooms</li>
+                <li>Master Ensuite</li>
+                <li>Modern Kitchen</li>
+                <li>Bright Living Room</li>
+                <li>Balcony View</li>
+                <li>Secure Parking</li>
+                <li>Gated Community</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Land Details</h3>
+            <h3>Location</h3>
+
             <p>
-                Total Size: <b>1 Hectare</b><br>
-                Ownership: Freehold<br>
-                Price: Ksh 800,000
+                Located in Nairobi within a secure residential estate,
+                close to schools, malls, transport, and business centers.
             </p>
         </div>
 
-        <a href="tel:+254740531831" class="btn full">Contact Agent</a>
+        <a href="tel:+254740531831" class="btn full">
+            Contact Agent
+        </a>
 
     </div>
 
@@ -81,23 +106,33 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
+
     <span onclick="closeLightbox()">✕</span>
+
     <img id="lightbox-img">
+
 </div>
 
 <!-- FLOAT -->
 <a href="tel:+254740531831" class="floating-contact">📞</a>
 
 <script>
+
 const images = document.querySelectorAll('.gallery img');
+
 const lightbox = document.getElementById('lightbox');
+
 const lightboxImg = document.getElementById('lightbox-img');
 
 images.forEach(img => {
+
     img.onclick = () => {
+
         lightbox.style.display = 'flex';
+
         lightboxImg.src = img.src;
     };
+
 });
 
 function closeLightbox(){
@@ -107,6 +142,7 @@ function closeLightbox(){
 function goBack(){
     window.location.href = "index.html#featured";
 }
+
 </script>
 
 </body>
