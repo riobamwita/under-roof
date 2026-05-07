@@ -1315,24 +1315,32 @@ footer {
 @media (max-width: 768px) {
 
     .ad-strip-section {
-        overflow: hidden;
         padding: 10px 0;
+        overflow: hidden;
     }
 
     .ad-strip {
         display: flex;
         flex-wrap: nowrap;
+
         overflow-x: auto;
         overflow-y: hidden;
 
         gap: 12px;
-        padding: 10px 12px;
+
         width: 100%;
+
+        /* IMPORTANT: remove centering issues */
+        justify-content: flex-start;
+
+        /* allow proper scroll start at far left */
+        padding-left: 12px;
+        padding-right: 12px;
 
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
 
-        scrollbar-width: none; /* Firefox */
+        scrollbar-width: none;
     }
 
     .ad-strip img {
