@@ -1384,3 +1384,8 @@ footer {
         display: block !important;
     }
 }
+
+.scroll-hint.hide {
+    opacity: 0;
+    transition: 0.5s ease;
+}

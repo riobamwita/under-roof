@@ -417,3 +417,12 @@ document.querySelectorAll(".photos-icon").forEach(icon => {
         window.location.href = `${link}#gallery`;
     });
 });
+
+const strips = document.querySelectorAll(".ad-strip, .gallery");
+
+strips.forEach(el => {
+    el.addEventListener("scroll", () => {
+        const hint = el.parentElement.querySelector(".scroll-hint");
+        if (hint) hint.classList.add("hide");
+    }, { once: true });
+});
