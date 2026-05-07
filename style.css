@@ -1402,21 +1402,6 @@ footer {
     }
 }
 
-.scroll-hint {
-    margin-top: -15px;
-    margin-bottom: 20px;
-
-    font-size: 13px;
-    color: #cfe7d9;
-
-    opacity: 0.8;
-}
-
-.scroll-hide {
-    opacity: 0;
-    transition: 0.5s ease;
-}
-
 /* MOBILE MENU */
 @media (max-width: 768px) {
 
