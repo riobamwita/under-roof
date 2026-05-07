@@ -1344,11 +1344,11 @@ footer {
     }
 
     .ad-strip img {
-        flex: 0 0 auto;
         width: 240px;
-        height: 320px;
+        height: 360px; /* increased from 320px */
         object-fit: cover;
 
+        flex: 0 0 auto;
         scroll-snap-align: start;
         border-radius: 0;
     }
