@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>UnderRoof Properties</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -51,36 +51,27 @@
 
             <div class="search-box">
 
+                <!-- AUTO POPULATED -->
                 <select id="propertyType">
                     <option value="">Property Type</option>
-                    <option>Apartment</option>
-                    <option>Warehouse</option>
-                    <option>Land</option>
                 </select>
 
+                <!-- AUTO POPULATED -->
                 <select id="location">
                     <option value="">Location</option>
-                    <option>Nairobi</option>
-                    <option>Ruiru</option>
-                    <option>Thika</option>
-                    <option>Mombasa</option>
                 </select>
 
+                <!-- AUTO POPULATED -->
                 <select id="dealType">
                     <option value="">Deal Type</option>
-                    <option>Sale</option>
-                    <option>Rent</option>
                 </select>
 
                 <select id="priceRange">
-                    <option value="">Price Range</option>
-                    <option>Under 1M</option>
-                    <option>1M - 5M</option>
-                    <option>5M - 20M</option>
-                    <option>20M+</option>
                 </select>
 
-                <button id="searchBtn">Search</button>
+                <button id="searchBtn">
+                    Search
+                </button>
 
             </div>
 
@@ -129,76 +120,56 @@
     <!-- PROPERTIES -->
     <section class="properties" id="properties">
 
-        <h2>Properties</h2>
+        <div class="section-head">
+            <h2>Properties</h2>
+        </div>
 
+        <!-- HERO SEARCH RESULTS WILL FILTER THESE -->
         <div class="tabs">
 
-            <button class="tab-btn active" data-tab="apartments">Apartments</button>
-            <button class="tab-btn" data-tab="land">Land</button>
-            <button class="tab-btn" data-tab="warehouses">Warehouses</button>
+            <button class="tab-btn active" data-tab="apartments">
+                Apartments
+            </button>
+
+            <button class="tab-btn" data-tab="land">
+                Land
+            </button>
+
+            <button class="tab-btn" data-tab="warehouses">
+                Warehouses
+            </button>
 
         </div>
 
         <!-- APARTMENTS -->
         <div id="apartments" class="tab-content active">
 
-            <div class="property-search">
+            <div class="property-search apartment-search">
 
-                <select>
-                    <option>Location</option>
-                    <option>Kenol</option>
-                    <option>Diani</option>
+                <select id="apartmentLocation">
+                    <option value="">Location</option>
                 </select>
 
-                <select>
-                    <option>Bedrooms</option>
-                    <option>4 Bedrooms</option>
-                    <option>5 Bedrooms</option>
+                <select id="apartmentBedrooms">
+                    <option value="">Bedrooms</option>
                 </select>
 
-                <select>
-                    <option>Sale / Rent</option>
-                    <option>Sale</option>
-                    <option>Rent</option>
+                <select id="apartmentDeal">
+                    <option value="">Deal Type</option>
                 </select>
 
-                <button>Search</button>
+                <button id="apartmentSearchBtn">
+                    Search
+                </button>
 
             </div>
 
-            <div class="property-grid">
-
-                <a href="property.html?id=kenol" class="property-card property-link">
-                    <img src="assets/kenolhouse.jpg" alt="Luxury Family Home">
-                    <div class="property-info">
-                        <h3>Luxury Home</h3>
-                        <p>Kenol</p>
-                        <span>KES 18,500,000</span>
-                    </div>
-                </a>
-
-                <a href="property.html?id=diani" class="property-card property-link">
-                    <img src="assets/dianihouse.jpg" alt="Beachfront Villa">
-                    <div class="property-info">
-                        <h3>Beachfront Villa</h3>
-                        <p>Diani</p>
-                        <span>KES 42,000,000</span>
-                    </div>
-                </a>
-
-                <a href="property.html?id=nairobihouse" class="property-card property-link">
-                    <img src="assets/nairobi house.jpg" alt="Luxury Nairobi Home">
-                    <div class="property-info">
-                        <h3>Luxury Home</h3>
-                        <p>Nairobi</p>
-                        <span>KES 35,000,000</span>
-                    </div>
-                </a>
-
+            <div class="property-grid" id="apartmentsGrid">
+                <!-- Auto Generated From JSON -->
             </div>
-            
+
             <button class="view-more-btn" data-target="apartments">
-             View More
+                View More
             </button>
 
         </div>
@@ -206,50 +177,28 @@
         <!-- LAND -->
         <div id="land" class="tab-content">
 
-            <div class="property-search">
+            <div class="property-search land-search">
 
-                <select>
-                    <option>Location</option>
-                    <option>Matuu</option>
+                <select id="landLocation">
+                    <option value="">Location</option>
                 </select>
 
-                <select>
-                    <option>Size</option>
-                    <option>1 Acre</option>
+                <select id="landSize">
+                    <option value="">Size</option>
                 </select>
 
-                <select>
-                    <option>Price Range</option>
-                    <option>Under 5M</option>
-                </select>
-
-                <button>Search</button>
+                <button id="landSearchBtn">
+                    Search
+                </button>
 
             </div>
 
-            <div class="property-grid">
-
-                <a href="property.html?id=matuu" class="property-card property-link">
-                    <img src="assets/matuuland.jpeg" alt="Prime Land">
-                    <div class="property-info">
-                        <h3>Prime Land</h3>
-                        <p>Matuu</p>
-                        <span>KES 2,500,000</span>
-                    </div>
-                </a>
-
-                <a href="property.html?id=dianiland" class="property-card property-link">
-                    <img src="assets/dianiland.jpeg" alt="Prime Beachside Land">
-                    <div class="property-info">
-                        <h3>Prime Beachside Land</h3>
-                        <p>Diani</p>
-                        <span>KES 8,500,000</span>
-                    </div>
-                </a>
-
+            <div class="property-grid" id="landGrid">
+                <!-- Auto Generated From JSON -->
             </div>
+
             <button class="view-more-btn" data-target="land">
-             View More
+                View More
             </button>
 
         </div>
@@ -257,35 +206,39 @@
         <!-- WAREHOUSES -->
         <div id="warehouses" class="tab-content">
 
-            <div class="property-search">
+            <div class="property-search warehouse-search">
 
-                <select>
-                    <option>Location</option>
+                <select id="warehouseLocation">
+                    <option value="">Location</option>
                 </select>
 
-                <select>
-                    <option>Size (Sq Ft)</option>
+                <select id="warehouseDeal">
+                    <option value="">Deal Type</option>
                 </select>
 
-                <select>
-                    <option>Sale / Rent</option>
-                </select>
-
-                <button>Search</button>
+                <button id="warehouseSearchBtn">
+                    Search
+                </button>
 
             </div>
 
-            <div class="property-grid">
+            <div class="property-grid" id="warehouseGrid">
 
-                <a href="property.html?id=warehouse" class="property-card property-link">
+                <a href="#" class="property-card">
+
                     <div class="property-info">
                         <h3>Coming Soon</h3>
                         <p>Warehouse Listings</p>
                     </div>
+
                 </a>
 
             </div>
 
+        </div>
+
+        <div id="noResults" style="display:none;">
+        <h3>No properties found</h3>
         </div>
 
     </section>
@@ -339,10 +292,12 @@
 
                 <div class="office-location">
                     <img src="assets/locationicon.png">
+
                     <div>
                         <strong>Head Office</strong>
                         <p>Nairobi, Kenya</p>
                     </div>
+
                 </div>
 
             </div>

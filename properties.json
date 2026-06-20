@@ -1,0 +1,148 @@
+[
+  {
+    "id": "kenol",
+    "title": "Luxury Family Home - Kenol",
+    "shortTitle": "Luxury Home",
+    "price": 18500000,
+    "formattedPrice": "KES 18,500,000",
+    "location": "Kenol",
+    "type": "Apartment",
+    "deal": "Sale",
+    "bedrooms": 4,
+    "hero": "assets/kenolhouse.jpg",
+    "thumbnail": "assets/kenolhouse.jpg",
+    "description": "Modern family home located in Kenol featuring spacious living areas, premium finishes, secure compound and easy access to major roads.",
+    "features": [
+      "4 Spacious Bedrooms",
+      "3 Bathrooms",
+      "Modern Kitchen",
+      "Private Balcony",
+      "Parking for 3 Cars",
+      "Secure Compound"
+    ],
+    "gallery": [
+      "assets/living1.jpg",
+      "assets/kitchen1.jpg",
+      "assets/bedroom1.jpg",
+      "assets/bathroom1.jpg",
+      "assets/balcony1.jpg",
+      "assets/fireplace2.jpg"
+    ]
+  },
+  {
+    "id": "diani",
+    "title": "Beachfront Villa - Diani",
+    "shortTitle": "Beachfront Villa",
+    "price": 42000000,
+    "formattedPrice": "KES 42,000,000",
+    "location": "Diani",
+    "type": "Apartment",
+    "deal": "Sale",
+    "bedrooms": 5,
+    "hero": "assets/dianihouse.jpg",
+    "thumbnail": "assets/dianihouse.jpg",
+    "description": "Beautiful beachfront villa located in Diani. Perfect for luxury living, holiday rentals and long-term investment.",
+    "features": [
+      "Beach Access",
+      "Swimming Pool",
+      "5 Bedrooms",
+      "Large Garden",
+      "Ocean View",
+      "Staff Quarters"
+    ],
+    "gallery": [
+      "assets/living2.jpg",
+      "assets/kitchen2.jpg",
+      "assets/bedroom2.jpg",
+      "assets/bathroom2.jpg",
+      "assets/balcony2.jpg",
+      "assets/dining2.jpg"
+    ]
+  },
+  {
+    "id": "nairobihouse",
+    "title": "Luxury Family Home - Nairobi",
+    "shortTitle": "Luxury Home",
+    "price": 35000000,
+    "formattedPrice": "KES 35,000,000",
+    "location": "Nairobi",
+    "type": "Apartment",
+    "deal": "Sale",
+    "bedrooms": 5,
+    "hero": "assets/nairobihouse.jpg",
+    "thumbnail": "assets/nairobihouse.jpg",
+    "description": "Elegant luxury residence located in Nairobi featuring spacious living spaces, modern interiors, premium finishes, multiple entertainment areas and excellent access to key amenities.",
+    "features": [
+      "5 Spacious Bedrooms",
+      "4 Modern Bathrooms",
+      "Luxury Kitchen",
+      "Dining Area",
+      "Private Balcony",
+      "Fireplace Lounge",
+      "Secure Compound",
+      "Ample Parking"
+    ],
+    "gallery": [
+      "assets/living3.jpg",
+      "assets/kitchen3.jpg",
+      "assets/dining3.jpg",
+      "assets/bedroom3.jpg",
+      "assets/sbedroom3.jpg",
+      "assets/bathroom3.jpg",
+      "assets/balcony3.jpg",
+      "assets/fireplace3.jpg"
+    ]
+  },
+  {
+    "id": "matuu",
+    "title": "Prime Land - Matuu",
+    "shortTitle": "Prime Land",
+    "price": 2500000,
+    "formattedPrice": "KES 2,500,000",
+    "location": "Matuu",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "hero": "assets/matuuland.jpeg",
+    "thumbnail": "assets/matuuland.jpeg",
+    "description": "Prime land suitable for residential or commercial development. Located near major roads and growing infrastructure.",
+    "features": [
+      "1 Acre",
+      "Ready Title",
+      "Road Access",
+      "Electricity Nearby",
+      "Water Available",
+      "Fast Growing Area"
+    ],
+    "gallery": [
+      "assets/matuuland.jpeg",
+      "assets/matuuad.jpg",
+      "assets/matuuad2.jpg"
+    ]
+  },
+  {
+    "id": "dianiland",
+    "title": "Prime Beachside Land - Diani",
+    "shortTitle": "Prime Beachside Land",
+    "price": 8500000,
+    "formattedPrice": "KES 8,500,000",
+    "location": "Diani",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1/2 Acre",
+    "hero": "assets/dianiland.jpeg",
+    "thumbnail": "assets/dianiland.jpeg",
+    "description": "Prime parcel of land located in Diani, suitable for residential development, holiday villas, apartments, or investment projects.",
+    "features": [
+      "1/2 Acre",
+      "Ready Title Deed",
+      "Road Access",
+      "Electricity Available",
+      "Water Available",
+      "Investment Opportunity"
+    ],
+    "gallery": [
+      "assets/dianiland.jpeg"
+    ]
+  }
+]
