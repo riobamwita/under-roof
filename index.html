@@ -1,622 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megapex Properties</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>UnderRoof Properties</title>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="intro-screen">
-    <div class="intro-text">
-        Your Dream Home is<br>
-        Waiting for You
-    </div>
-</div>
-
-<!-- NAVBAR -->
 <header class="navbar">
+
     <div class="logo">
-        <img src="assets/logo.png" alt="Megapex Logo">
+        UNDERROOF
     </div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Properties</a>
-        <a href="about.html">About Us</a>
-        <a href="#">Contacts</a>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#realtors">Our Realtors</a>
+        <a href="#contact">Reach Us</a>
     </nav>
 
-    <a class="nav-phone" href="tel:+254740531831">
-    📞 0740 531 831
-    </a>
-    <div class="menu-toggle" id="menu-toggle">
+    <div class="menu-toggle" id="menuToggle">
         ☰
     </div>
+
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
 
     <div class="slideshow">
+
         <img src="assets/background.jpg" class="active">
         <img src="assets/background2.jpg">
         <img src="assets/background3.jpeg">
+
     </div>
 
     <div class="overlay"></div>
 
     <div class="hero-content">
-        <h1>The Right Property Awaits</h1>
+
+        <h1>Find Your Perfect Property</h1>
 
         <div class="search-box">
 
-    <select id="typeFilter">
-        <option value="">Property Type</option>
-        <option value="apartment">Apartment</option>
-        <option value="house">House</option>
-        <option value="land">Land</option>
-    </select>
+            <select id="propertyType">
 
-    <select id="categoryFilter">
-        <option value="">Category</option>
-        <option value="sale">Sale</option>
-        <option value="rent">Rent</option>
-        <option value="airbnb">Airbnb</option>
-    </select>
+                <option value="">Property Type</option>
+                <option>Apartment</option>
+                <option>Warehouse</option>
+                <option>Land</option>
 
-    <select id="locationFilter">
-        <option value="">Location</option>
-        <option value="nairobi">Nairobi</option>
-        <option value="diani">Diani</option>
-        <option value="kenol">Kenol</option>
-        <option value="matuu">Matuu</option>
-    </select>
+            </select>
 
-    <select id="bedroomFilter">
-        <option value="">Bedrooms</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
+            <select id="location">
 
-    <input id="minPrice" type="number" placeholder="Min Price">
-    <input id="maxPrice" type="number" placeholder="Max Price">
-    <input id="keyword" type="text" placeholder="Keyword">
+                <option value="">Location</option>
+                <option>Nairobi</option>
+                <option>Ruiru</option>
+                <option>Thika</option>
+                <option>Mombasa</option>
 
-    <button id="searchBtn" class="btn">Search</button>
+            </select>
 
-</div>
-    </div>
-</section>
+            <select id="dealType">
 
-<section class="section ad-strip-section">
-    <h2>Offers!!</h2>
+                <option value="">Deal Type</option>
+                <option>Sale</option>
+                <option>Rent</option>
 
-    <div class="ad-strip" id="adStrip">
-        <img src="assets/kenolad.jpg" alt="Ad 1">
-        <img src="assets/matuuad2.jpg" alt="Ad 2">
-        <img src="assets/matuuad.jpg" alt="Ad 3">
-        <img src="assets/companyadposter.jpg" alt="Ad 4">
-        <img src="assets/companycontactposter.jpg" alt="Ad 5">
-    </div>
-</section>
+            </select>
 
-<!-- PROPERTIES -->
-<section class="section properties-section">
-    <h2>Properties Available Across Kenya</h2>
+            <select id="priceRange">
 
-    <div class="properties-grid">
+                <option value="">Price Range</option>
+                <option>Under 1M</option>
+                <option>1M - 5M</option>
+                <option>5M - 20M</option>
+                <option>20M+</option>
 
-        <!-- Murang’a -->
-<div class="featured-card location-card" data-location="kenol">
-    <img src="assets/kenol.jpg" alt="Kenol">
+            </select>
 
-    <div class="featured-badge">LOCATION</div>
-
-    <div class="featured-info">
-        <h3>Murang’a</h3>
-        <p>Explore Properties</p>
-    </div>
-
-    <div class="featured-icons">
-        <img src="assets/photosicon.png" alt="Photos">
-        <img src="assets/shareicon.png" alt="Share" class="share-icon">
-    </div>
-</div>
-
-<!-- Machakos -->
-<div class="featured-card location-card" data-location="matuu">
-    <img src="assets/matuu.jpeg" alt="Matuu">
-
-    <div class="featured-badge">LOCATION</div>
-
-    <div class="featured-info">
-        <h3>Machakos</h3>
-        <p>Explore Properties</p>
-    </div>
-
-    <div class="featured-icons">
-        <img src="assets/photosicon.png" alt="Photos">
-        <img src="assets/shareicon.png" alt="Share" class="share-icon">
-    </div>
-</div>
-
-<!-- Kwale -->
-<div class="featured-card location-card" data-location="diani">
-    <img src="assets/diani.jpeg" alt="Diani">
-
-    <div class="featured-badge">LOCATION</div>
-
-    <div class="featured-info">
-        <h3>Kwale</h3>
-        <p>Explore Properties</p>
-    </div>
-
-    <div class="featured-icons">
-        <img src="assets/photosicon.png" alt="Photos">
-        <img src="assets/shareicon.png" alt="Share" class="share-icon">
-    </div>
-</div>
-
-<!-- Nairobi -->
-<div class="featured-card location-card hidden-location" data-location="nairobi">
-    <img src="assets/background.jpg" alt="Nairobi">
-
-    <div class="featured-badge">LOCATION</div>
-
-    <div class="featured-info">
-        <h3>Nairobi</h3>
-        <p>Explore Properties</p>
-    </div>
-
-    <div class="featured-icons">
-        <img src="assets/photosicon.png" alt="Photos">
-        <img src="assets/shareicon.png" alt="Share" class="share-icon">
-    </div>
-</div>
-
-    </div>
-
-    <div class="more-properties">
-        <button class="more-btn btn">More Locations</button>
-    </div>
-
-</section>
-
-<!-- FEATURED PROPERTIES -->
-<section class="section featured-section" id="featured">
-    <h2>Featured Properties</h2>
-
-    <div id="activeFilters" class="active-filters"></div>
-
-    <div class="featured-grid">
-
-        <!-- Property 1 -->
-        <div class="featured-card no-coming-soon"
-             data-type="apartment"
-             data-category="airbnb"
-             data-location="nairobi"
-             data-bedrooms="2"
-             data-price="12400"
-             data-link="/airbnb-nairobi.html">
-
-            <img src="assets/living2.jpg" alt="2 Bedroom Airbnb Nairobi">
-
-            <div class="featured-badge">AIRBNB</div>
-
-            <div class="featured-info">
-                <h3>2 Bedroom AirBnB - Nairobi</h3>
-                <p>Ksh 12,400 / Night</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/airbnb-nairobi.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
+            <button id="searchBtn">
+                Search
+            </button>
 
         </div>
 
-        <!-- Property 2 (DIANI LAND FIXED) -->
-        <div class="featured-card no-coming-soon"
-             data-type="land"
-             data-category="sale"
-             data-location="diani"
-             data-bedrooms="0"
-             data-price="2000000"
-             data-link="/diani-land.html">
-
-            <img src="assets/diani.jpeg" alt="Land in Diani">
-
-            <div class="featured-badge">FOR SALE</div>
-
-            <div class="featured-info">
-                <h3>2 Hectares of Land - Diani</h3>
-                <p>Ksh 2,000,000</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/diani-land.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
-
-        </div>
-
-        <!-- Property 3 -->
-        <div class="featured-card no-coming-soon"
-             data-type="house"
-             data-category="sale"
-             data-location="kenol"
-             data-bedrooms="3"
-             data-price="4200000"
-             data-link="/kenol-house.html">
-
-            <img src="assets/kenolhouse.jpg" alt="House in Kenol">
-
-            <div class="featured-badge">HOT DEAL</div>
-
-            <div class="featured-info">
-                <h3>3 Bedroom Home - Kenol</h3>
-                <p>Ksh 4,200,000</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/kenol-house.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
-
-        </div>
-
-        <!-- Property 4 -->
-        <div class="featured-card no-coming-soon"
-             data-type="land"
-             data-category="sale"
-             data-location="matuu"
-             data-bedrooms="1"
-             data-price="3800000"
-             data-link="/matuu-land.html">
-
-            <img src="assets/matuu.jpeg" alt="Land in Matuu">
-
-            <div class="featured-badge">FOR SALE</div>
-
-            <div class="featured-info">
-                <h3>1 Hectare of Land - Matuu</h3>
-                <p>Ksh 800,000</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/matuu-land.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
-
-        </div>
-
-        <!-- Property 5 -->
-        <div class="featured-card"
-             data-type="house"
-             data-category="rent"
-             data-location="nairobi"
-             data-bedrooms="2"
-             data-price="102400"
-             data-link="/nairobi-rent-house.html">
-
-            <img src="assets/background.jpg" alt="2 Bedroom House Nairobi">
-
-            <div class="featured-badge">FOR RENT</div>
-
-            <div class="featured-info">
-                <h3>2 Bedroom House - Nairobi</h3>
-                <p>Ksh 102,400 / Month</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/nairobi-rent-house.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
-
-        </div>
-
-        <!-- Property 6 -->
-        <div class="featured-card no-coming-soon"
-             data-type="house"
-             data-category="sale"
-             data-location="diani"
-             data-bedrooms="3"
-             data-price="15000000"
-             data-link="/diani-house.html">
-
-            <img src="assets/dianihouse.jpg" alt="House in Diani">
-
-            <div class="featured-badge">FOR SALE</div>
-
-            <div class="featured-info">
-                <h3>3 Bedroom House - Diani</h3>
-                <p>Ksh 15,000,000</p>
-            </div>
-
-            <div class="featured-icons">
-                <img src="assets/likeicon.png" alt="Like" class="like-icon">
-                <img src="assets/photosicon.png" alt="Photos" class="photos-icon" data-link="/diani-house.html">
-                <img src="assets/shareicon.png" alt="Share" class="share-icon">
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="more-properties">
-        <button class="more-btn">View More</button>
     </div>
 
 </section>
 
-<!-- BENEFITS -->
-<section class="section dark">
-    <h2>Benefits For You</h2>
+<section class="offers" id="offers">
 
-    <div class="accordion">
+    <div class="offers-header">
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Professional Expertise
-            </div>
-            <div class="accordion-body">
-                Real estate professionals handle the technical aspects of transactions with precision. Their experience reduces risk and prevents costly errors during the process.
-            </div>
+        <div>
+            <h2>Featured Offers</h2>
+            <p>Exclusive opportunities and current promotions</p>
         </div>
 
-        <div class="accordion-item active">
-            <div class="accordion-header">
-                <span class="icon">›</span> Smart Viewing Management
-            </div>
-            <div class="accordion-body">
-                Agents streamline property visits by filtering out unqualified inquiries and distractions. They ensure you only engage with listings or buyers that match your exact criteria.
-            </div>
-        </div>
+        <button class="offers-toggle" id="offersToggle">
+            View Offers
+        </button>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Local Market Insight
-            </div>
-            <div class="accordion-body">
-                Agents have in-depth knowledge of neighborhoods, pricing trends, and amenities. This helps you make informed decisions based on accurate, location-specific data.
-            </div>
-        </div>
+    </div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Accurate Pricing Strategy
-            </div>
-            <div class="accordion-body">
-                Proper valuation ensures you neither overpay nor undersell a property. Agents analyze market data to position your price competitively.
-            </div>
-        </div>
+    <div class="offers-container" id="offersContainer">
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Market Trend Analysis
-            </div>
-            <div class="accordion-body">
-                Understanding market conditions is critical for timing your transaction. Agents provide insights into demand, supply, and pricing shifts.
-            </div>
-        </div>
+        <div class="offers-grid">
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Industry Connections
+            <div class="offer-card">
+                <img src="assets/companyadposter.jpg">
             </div>
-            <div class="accordion-body">
-                Agents connect you with trusted professionals such as lawyers, inspectors, and financiers. This network simplifies and accelerates the entire transaction process.
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Strategic Negotiation
+            <div class="offer-card">
+                <img src="assets/companycontactposter.jpg">
             </div>
-            <div class="accordion-body">
-                Skilled negotiation ensures you secure favorable terms and pricing. Agents also maintain confidentiality to protect your interests throughout the deal.
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Documentation Handling
+            <div class="offer-card">
+                <img src="assets/kenolad.jpg">
             </div>
-            <div class="accordion-body">
-                Property transactions involve complex legal and contractual paperwork. Agents ensure all documents are accurate, complete, and compliant.
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Post-Sale Support
-            </div>
-            <div class="accordion-body">
-                Support does not end after the transaction is completed. Agents remain available to address follow-up questions and issues.
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="icon">›</span> Long-Term Partnership
-            </div>
-            <div class="accordion-body">
-                Building a relationship with a reliable agent benefits future transactions. This continuity improves efficiency and trust over time.
-            </div>
         </div>
 
     </div>
+
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-    <div class="contact-container">
+<section class="properties" id="properties">
 
-        <div class="contact-left">
-            <h2>Get In Touch</h2>
-            <p>Reach out for premium property listings, site visits, or investment advisory.</p>
+    <h2>Properties</h2>
 
-            <div class="contact-grid">
+    <div class="tabs">
 
-                <a href="tel:+254740531831" class="contact-card">
-                    <img src="assets/phoneicon.png" alt="Call">
-                    <div>
-                        <span>Call</span>
-                        <p>0740531831</p>
-                    </div>
-                </a>
+        <button class="tab-btn active" data-tab="apartments">
+            Apartments
+        </button>
 
-                <a href="https://wa.me/254740531831" target="_blank" class="contact-card">
-                    <img src="assets/whatsappicon.png" alt="WhatsApp">
-                    <div>
-                        <span>WhatsApp</span>
-                        <p>0740531831</p>
-                    </div>
-                </a>
+        <button class="tab-btn" data-tab="land">
+            Land
+        </button>
 
-                <a href="mailto:megapexproperties@gmail.com" class="contact-card">
-                    <img src="assets/mailicon.png" alt="Email">
-                    <div>
-                        <span>Email</span>
-                        <p>megapexpro...</p>
-                    </div>
-                </a>
+        <button class="tab-btn" data-tab="warehouses">
+            Warehouses
+        </button>
 
-                <a href="https://www.instagram.com/silviar_wanjiku" target="_blank" class="contact-card">
-                    <img src="assets/instagramicon.png" alt="Instagram">
-                    <div>
-                        <span>Instagram</span>
-                        <p>@silviar_wa...</p>
-                    </div>
-                </a>
+    </div>
 
-                <a href="https://web.facebook.com/people/Megapex-Properties/61583224914019/" target="_blank" class="contact-card">
-                    <img src="assets/facebook.png" alt="Facebook">
-                    <div>
-                        <span>Facebook</span>
-                        <p>Megapex Properties</p>
-                    </div>
-                </a>
+    <!-- APARTMENTS -->
+    <div id="apartments" class="tab-content active">
 
-                <a href="https://www.google.com/maps?q=Ruiru,Kiambu" target="_blank" class="contact-card">
-                    <img src="assets/locationicon.png" alt="Location">
-                    <div>
-                        <span>Location</span>
-                        <p>Ruiru, Kiambu</p>
-                    </div>
-                </a>
+        <div class="property-search">
 
+            <select>
+                <option>Location</option>
+                <option>Kenol</option>
+                <option>Diani</option>
+            </select>
+
+            <select>
+                <option>Bedrooms</option>
+                <option>4 Bedrooms</option>
+                <option>5 Bedrooms</option>
+            </select>
+
+            <select>
+                <option>Sale / Rent</option>
+                <option>Sale</option>
+                <option>Rent</option>
+            </select>
+
+            <button>Search</button>
+
+        </div>
+
+        <div class="property-grid">
+
+            <a href="property.html?id=kenol" class="property-card property-link">
+
+                <img src="assets/kenolhouse.jpg" alt="Luxury Family Home">
+
+                <div class="property-info">
+                    <h3>Luxury Family Home</h3>
+                    <p>Kenol</p>
+                    <span>KES 18,500,000</span>
+                </div>
+
+            </a>
+
+            <a href="property.html?id=diani" class="property-card property-link">
+
+                <img src="assets/dianihouse.jpg" alt="Beachfront Villa">
+
+                <div class="property-info">
+                    <h3>Beachfront Villa</h3>
+                    <p>Diani</p>
+                    <span>KES 42,000,000</span>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- LAND -->
+    <div id="land" class="tab-content">
+
+        <div class="property-search">
+
+            <select>
+                <option>Location</option>
+                <option>Matuu</option>
+            </select>
+
+            <select>
+                <option>Size</option>
+                <option>1 Acre</option>
+            </select>
+
+            <select>
+                <option>Price Range</option>
+                <option>Under 5M</option>
+            </select>
+
+            <button>Search</button>
+
+        </div>
+
+        <div class="property-grid">
+
+            <a href="property.html?id=matuu" class="property-card property-link">
+
+                <img src="assets/matuuland.jpeg" alt="Prime Land">
+
+                <div class="property-info">
+                    <h3>Prime Land</h3>
+                    <p>Matuu</p>
+                    <span>KES 2,500,000</span>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- WAREHOUSES -->
+    <div id="warehouses" class="tab-content">
+
+        <div class="property-search">
+
+            <select>
+                <option>Location</option>
+            </select>
+
+            <select>
+                <option>Size (Sq Ft)</option>
+            </select>
+
+            <select>
+                <option>Sale / Rent</option>
+            </select>
+
+            <button>Search</button>
+
+        </div>
+
+        <div class="property-grid">
+
+            <a href="property.html?id=warehouse" class="property-card property-link">
+
+                <div class="property-info">
+                    <h3>Coming Soon</h3>
+                    <p>Warehouse Listings</p>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="realtors-section" id="realtors">
+
+    <div class="section-head">
+        <h2>Our Realtors</h2>
+        <p>Experienced property professionals across Kenya.</p>
+    </div>
+
+    <div class="realtors-row">
+
+        <div class="realtor-card">
+            <img src="assets/realtor1.png" alt="">
+            <div>
+                <h3>Brian Mwangi</h3>
+                <span>Senior Property Consultant</span>
             </div>
         </div>
 
-        <div class="contact-right">
-            <h3>Working Hours</h3>
-            <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-            <p>Sat: 9:00 AM - 4:00 PM</p>
+        <div class="realtor-card featured">
+            <img src="assets/realtor2.png" alt="">
+            <div>
+                <h3>Faith Wanjiku</h3>
+                <span>Luxury Homes Specialist</span>
+            </div>
+        </div>
+
+        <div class="realtor-card">
+            <img src="assets/realtor3.png" alt="">
+            <div>
+                <h3>Kevin Otieno</h3>
+                <span>Commercial Property Advisor</span>
+            </div>
         </div>
 
     </div>
+
 </section>
 
-<!-- FLOATING BUTTON -->
-<div class="floating-contact" id="openContact">
-    ✉
-</div>
+<section class="contact-modern" id="contact">
 
-<!-- SCROLL TO TOP BUTTON -->
-<div class="floating-top" id="scrollTop">
-    ↑
-</div>
+    <div class="contact-left">
 
-<!-- CONTACT MODAL -->
-<div class="contact-modal" id="contactModal">
-    <div class="modal-content">
+        <div class="location-content">
+            <span class="contact-tag">UNDERROOF PROPERTIES</span>
 
-        <span class="close-modal" id="closeContact">&times;</span>
+            <h2>Let's Find Your Next Property</h2>
 
-        <h2>Contact Us</h2>
-        <p>Use the form below to contact us!</p>
+            <p>
+                Visit our offices, call our agents, or chat with us instantly.
+                We're ready to help you secure your next investment.
+            </p>
 
-        <form id="contactForm">
+            <div class="office-location">
 
-            <!-- NAME -->
-            <input 
-                type="text" 
-                id="name"
-                placeholder="Name"
-                required
-            >
+                <img src="assets/locationicon.png">
 
-            <!-- EMAIL -->
-            <input 
-                type="email" 
-                id="email"
-                placeholder="Email"
-                required
-            >
+                <div>
+                    <strong>Head Office</strong>
+                    <p>Nairobi, Kenya</p>
+                </div>
 
-            <!-- PHONE -->
-            <input 
-                type="tel" 
-                id="phone"
-                placeholder="Phone"
-                pattern="[0-9]{10}"
-                required
-            >
+            </div>
 
-            <!-- MESSAGE -->
-            <textarea 
-                id="message"
-                placeholder="Type your message..."
-                required
-            ></textarea>
-
-            <button type="submit">Send</button>
-
-        </form>
+        </div>
 
     </div>
-</div>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-content">
-        <p>© 2026 Megapex Properties. All rights reserved.</p>
+    <div class="contact-right">
 
-        <a href="https://wa.me/254729709807" target="_blank" class="designer-link">
-            Designed by Ramadhan <R class="M"></R>
+        <h3>Get In Touch</h3>
+
+        <a href="https://wa.me/254700000000" class="action-btn whatsapp">
+            <img src="assets/whatsappicon.png">
+            Chat on WhatsApp
         </a>
+
+        <a href="tel:+254700000000" class="action-btn phone">
+            <img src="assets/phoneicon.png">
+            Call Us
+        </a>
+
+        <a href="mailto:info@underroof.co.ke" class="action-btn email">
+            <img src="assets/mailicon.png">
+            Send Email
+        </a>
+
+        <div class="social-section">
+
+    <span class="social-label">Follow Us</span>
+
+    <div class="social-row">
+
+        <a href="#">
+            <img src="assets/facebook.png">
+        </a>
+
+        <a href="#">
+            <img src="assets/instagramicon.png">
+        </a>
+
     </div>
-</footer>
 
-
-<div id="comingSoonPopup" class="coming-soon">
-    <div class="coming-soon-box">
-        <p>🚧 Coming Soon</p>
     </div>
-</div>
 
-<audio id="clickSound" preload="auto">
-    <source src="assets/click.mp3" type="audio/mpeg">
-</audio>
+    </div>
 
-<audio id="errorSound" preload="auto">
-    <source src="assets/error.mp3" type="audio/mpeg">
-</audio>
+</section>
 
 <script src="script.js"></script>
 

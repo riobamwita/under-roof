@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Property Details | UnderRoof</title>
+
+<link rel="stylesheet" href="property.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- BACK BUTTON -->
+<button id="backBtn" class="back-btn">
+    Back
+</button>
+
+<section class="hero">
+
+    <div class="hero-content">
+        
+        <div class="gallery-section">
+
+        <h2>Property Gallery</h2>
+
+        <div id="gallery" class="gallery"></div>
+
+       </div>
+
+        <div class="property-badge">
+            Premium Listing
+        </div>
+
+        <h1 id="propertyTitle">
+            Loading...
+        </h1>
+
+        <div
+            id="propertyPrice"
+            class="price">
+        </div>
+
+        <div
+            id="heroMeta"
+            class="hero-meta">
+        </div>
+
+        <div class="hero-description">
+
+            <h3>Overview</h3>
+
+            <p id="description"></p>
+
+        </div>
+
+        <div class="hero-contact">
+
+            <a href="https://wa.me/254729709807" class="btn">
+
+            <img
+             src="assets/whatsappicon.png"
+             alt="WhatsApp"
+             class="btn-icon"
+        >
+
+            WhatsApp Agent
+
+            </a>
+
+            <a href="tel:+254729709807" class="btn secondary">
+
+            <img
+             src="assets/phoneicon.png"
+             alt="Phone"
+             class="btn-icon"
+         >
+
+            Call Agent
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="property-details">
+
+    <aside class="sidebar">
+
+        <div class="info-card">
+
+            <h3>Features</h3>
+
+            <ul id="features"></ul>
+
+        </div>
+
+        <div class="agent-card">
+
+            <h3>Interested?</h3>
+
+            <p>
+                Schedule a viewing or speak with an agent.
+            </p>
+
+
+<form class="contact-form">
+    
+    <input
+        type="text"
+        placeholder="Your Name"
+        required
+    >
+
+    <input
+        type="tel"
+        placeholder="Phone Number"
+        required
+    >
+
+    <textarea
+        placeholder="I'm interested in this property..."
+        rows="4"
+        required
+    ></textarea>
+
+    <button type="submit" class="btn">
+        Send Inquiry
+    </button>
+
+</form>
+
+        </div>
+
+    </aside>
+
+</section>
+
+<div id="lightbox" class="lightbox">
+
+    <button class="lightbox-arrow lightbox-prev">
+        ❮
+    </button>
+
+    <div class="lightbox-track"></div>
+
+    <button class="lightbox-arrow lightbox-next">
+        ❯
+    </button>
+
+    <span class="close-lightbox">
+        &times;
+    </span>
+
+    <div class="lightbox-counter"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
