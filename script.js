@@ -1,6 +1,3 @@
-let currentImageIndex = 0;
-let galleryImages = [];
-
 document.addEventListener("DOMContentLoaded", () => {
 
     // ================= NAV MENU =================
@@ -26,9 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 navMenu.classList.remove("active");
                 menuToggle.textContent = "☰";
+
             });
 
         });
+
     }
 
     // ================= HERO SEARCH =================
@@ -65,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
         });
+
     }
 
     // ================= PROPERTY TABS =================
@@ -95,7 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document
                 .getElementById(targetTab)
                 ?.classList.add("active");
+
         });
+
     });
 
     // ================= OFFERS SECTION =================
@@ -142,14 +144,93 @@ document.addEventListener("DOMContentLoaded", () => {
                 offerCards.forEach(card =>
                     card.classList.remove("show")
                 );
+
             }
+
         });
+
     }
 
-    // ================= PROPERTY DETAILS =================
+    // ================= HERO SLIDESHOW =================
+
+    const slides =
+        document.querySelectorAll(".slideshow img");
+
+    if (slides.length) {
+
+        let currentSlide = 0;
+
+        slides[currentSlide].classList.add("active");
+
+        setInterval(() => {
+
+            slides[currentSlide]
+                .classList.remove("active");
+
+            currentSlide =
+                (currentSlide + 1) % slides.length;
+
+            slides[currentSlide]
+                .classList.add("active");
+
+        }, 5000);
+
+    }
+
+});
+
+function setupViewMore(sectionId) {
+    const section = document.getElementById(sectionId);
+    const cards = section.querySelectorAll(".property-card");
+    const btn = document.querySelector(`.view-more-btn[data-target="${sectionId}"]`);
+
+    let expanded = false;
+
+    function getLimit() {
+        return window.innerWidth <= 768 ? 2 : 3;
+    }
+
+    function updateView() {
+        const limit = getLimit();
+
+        cards.forEach((card, index) => {
+            if (!expanded && index >= limit) {
+                card.classList.add("hidden");
+            } else {
+                card.classList.remove("hidden");
+            }
+        });
+
+        btn.textContent = expanded ? "View Less" : "View More";
+    }
+
+    btn.addEventListener("click", () => {
+        expanded = !expanded;
+        updateView();
+    });
+
+    window.addEventListener("resize", updateView);
+
+    updateView();
+}
+
+// initialize all sections
+setupViewMore("apartments");
+setupViewMore("land");
+setupViewMore("warehouses");
+
+
+
+let currentImageIndex = 0;
+let galleryImages = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // =========================
+    // PROPERTY DATA
+    // =========================
 
     const properties = {
-
         kenol: {
             title: "Luxury Family Home - Kenol",
             price: "KES 18,500,000",
@@ -157,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bedrooms: "4 Bedrooms",
             type: "House",
             hero: "assets/kenolhouse.jpg",
-
             gallery: [
                 "assets/living1.jpg",
                 "assets/kitchen1.jpg",
@@ -166,10 +246,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/balcony1.jpg",
                 "assets/fireplace2.jpg"
             ],
-
             description:
                 "Modern family home located in Kenol featuring spacious living areas, premium finishes, secure compound and easy access to major roads.",
-
             features: [
                 "4 Spacious Bedrooms",
                 "3 Bathrooms",
@@ -187,7 +265,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bedrooms: "5 Bedrooms",
             type: "Villa",
             hero: "assets/dianihouse.jpg",
-
             gallery: [
                 "assets/living2.jpg",
                 "assets/kitchen2.jpg",
@@ -196,10 +273,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "assets/balcony2.jpg",
                 "assets/dining2.jpg"
             ],
-
             description:
                 "Beautiful beachfront villa located in Diani. Perfect for luxury living, holiday rentals and long-term investment.",
-
             features: [
                 "Beach Access",
                 "Swimming Pool",
@@ -209,6 +284,57 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Staff Quarters"
             ]
         },
+        nairobihouse: {
+            title: "Luxury Family Home - Nairobi",
+            price: "KES 35,000,000",
+            location: "Nairobi",
+            bedrooms: "5 Bedrooms",
+            type: "House",
+            hero: "assets/nairobi house.jpg",
+            gallery: [
+        "assets/living3.jpg",
+        "assets/kitchen3.jpg",
+        "assets/dining3.jpg",
+        "assets/bedroom3.jpg",
+        "assets/sbedroom3.jpg",
+        "assets/bathroom3.jpg",
+        "assets/balcony3.jpg",
+        "assets/fireplace3.jpg"
+            ],
+    description:
+        "Elegant luxury residence located in Nairobi featuring spacious living spaces, modern interiors, premium finishes, multiple entertainment areas, and excellent access to key amenities. Ideal for families seeking comfort, security, and prestige.",
+    features: [
+        "5 Spacious Bedrooms",
+        "4 Modern Bathrooms",
+        "Luxury Kitchen",
+        "Dining Area",
+        "Private Balcony",
+        "Fireplace Lounge",
+        "Secure Compound",
+        "Ample Parking"
+    ]
+},
+        dianiland: {
+    title: "Prime Beachside Land - Diani",
+    price: "KES 8,500,000",
+    location: "Diani",
+    size: "1/2 Acre",
+    type: "Land",
+    hero: "assets/dianiland.jpeg",
+    gallery: [
+        "assets/dianiland.jpeg"
+    ],
+    description:
+        "Prime parcel of land located in Diani, suitable for residential development, holiday villas, apartments, or investment projects. Positioned in a rapidly growing area with excellent access roads and nearby amenities.",
+    features: [
+        "1/2 Acre",
+        "Ready Title Deed",
+        "Road Access",
+        "Electricity Available",
+        "Water Available",
+        "Investment Opportunity"
+    ]
+},
 
         matuu: {
             title: "Prime Land - Matuu",
@@ -217,16 +343,13 @@ document.addEventListener("DOMContentLoaded", () => {
             size: "1 Acre",
             type: "Land",
             hero: "assets/matuuland.jpeg",
-
             gallery: [
                 "assets/matuuland.jpeg",
                 "assets/matuuad.jpg",
                 "assets/matuuad2.jpg"
             ],
-
             description:
                 "Prime land suitable for residential or commercial development. Located near major roads and growing infrastructure.",
-
             features: [
                 "1 Acre",
                 "Ready Title",
@@ -238,124 +361,131 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    const params =
-        new URLSearchParams(window.location.search);
+    // =========================
+    // LOAD PROPERTY
+    // =========================
 
-    const propertyId =
-        params.get("id") || "kenol";
-
-    const property =
-        properties[propertyId];
+    const params = new URLSearchParams(window.location.search);
+    const propertyId = params.get("id") || "kenol";
+    const property = properties[propertyId];
 
     if (property) {
 
-        document.getElementById("propertyTitle") &&
-            (document.getElementById("propertyTitle").textContent =
-                property.title);
+        document.getElementById("propertyTitle").textContent =
+            property.title;
 
-        document.getElementById("propertyPrice") &&
-            (document.getElementById("propertyPrice").textContent =
-                property.price);
+        document.getElementById("propertyPrice").textContent =
+            property.price;
 
-        const meta =
-            document.getElementById("heroMeta");
+        const meta = document.getElementById("heroMeta");
 
-        if (meta) {
+        meta.innerHTML = "";
 
-            meta.innerHTML = "";
-
-            if (property.location) {
-                meta.innerHTML +=
-                    `<span> ${property.location}</span>`;
-            }
-
-            if (property.bedrooms) {
-                meta.innerHTML +=
-                    `<span>🛏 ${property.bedrooms}</span>`;
-            }
-
-            if (property.size) {
-                meta.innerHTML +=
-                    `<span> ${property.size}</span>`;
-            }
-
-            meta.innerHTML +=
-                `<span>${property.type}</span>`;
+        if (property.location) {
+            meta.innerHTML += `<span>📍 ${property.location}</span>`;
         }
 
-        const gallery =
-    document.getElementById("gallery");
-
-if (gallery) {
-
-    gallery.innerHTML = "";
-
-    const allImages = [
-        property.hero,
-        ...property.gallery
-    ];
-
-    galleryImages = allImages;
-
-    allImages.forEach((image, index) => {
-
-    const img = document.createElement("img");
-
-    img.loading = "lazy";
-    img.decoding = "async";
-    img.src = image;
-
-    img.addEventListener("click", () => {
-
-        currentImageIndex = index;
-        openLightbox(index);
-
-    });
-
-    gallery.appendChild(img);
-
-});
-
-}
-
-        const description =
-            document.getElementById("description");
-
-        if (description) {
-            description.textContent =
-                property.description;
+        if (property.bedrooms) {
+            meta.innerHTML += `<span>🛏 ${property.bedrooms}</span>`;
         }
 
-        const features =
-            document.getElementById("features");
+        if (property.size) {
+            meta.innerHTML += `<span>📐 ${property.size}</span>`;
+        }
 
-        if (features) {
+        meta.innerHTML += `<span>🏠 ${property.type}</span>`;
 
-            features.innerHTML = "";
+        document.getElementById("description").textContent =
+            property.description;
 
-            property.features.forEach(feature => {
+        const gallery = document.getElementById("gallery");
 
-                const li =
-                    document.createElement("li");
+        gallery.innerHTML = "";
 
-                li.textContent = feature;
+        galleryImages = [
+            property.hero,
+            ...property.gallery
+        ];
 
-                features.appendChild(li);
+        galleryImages.forEach((image, index) => {
+
+            const img = document.createElement("img");
+
+            img.src = image;
+            img.loading = "lazy";
+            img.decoding = "async";
+
+            img.addEventListener("click", () => {
+                currentImageIndex = index;
+                openLightbox(index);
             });
-        }
+
+            gallery.appendChild(img);
+        });
+
+        const features = document.getElementById("features");
+
+        features.innerHTML = "";
+
+        property.features.forEach(feature => {
+
+            const li = document.createElement("li");
+            li.textContent = feature;
+
+            features.appendChild(li);
+        });
     }
 
-    // ================= MODERN LIGHTBOX =================
+    // =========================
+    // BACK BUTTON
+    // =========================
 
-const lightbox =
-    document.getElementById("lightbox");
+    const backBtn = document.getElementById("backBtn");
 
-function openLightbox(startIndex = 0){
+    if (backBtn) {
 
-    if(!lightbox) return;
+        backBtn.addEventListener("click", () => {
+
+            const returnUrl =
+                sessionStorage.getItem("returnUrl");
+
+            if (returnUrl) {
+                window.location.href = returnUrl;
+            } else {
+                window.history.back();
+            }
+        });
+    }
+
+    // =========================
+    // LIGHTBOX CLOSE ON BACKDROP
+    // =========================
+
+    const lightbox = document.getElementById("lightbox");
+
+    if (lightbox) {
+
+        lightbox.addEventListener("click", e => {
+
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+});
+
+
+// =========================
+// LIGHTBOX
+// =========================
+
+function openLightbox(startIndex = 0) {
+
+    const lightbox = document.getElementById("lightbox");
+
+    if (!lightbox) return;
 
     lightbox.innerHTML = `
-
         <button class="lightbox-arrow lightbox-prev">
             ❮
         </button>
@@ -365,8 +495,6 @@ function openLightbox(startIndex = 0){
                 <img
                     src="${img}"
                     alt=""
-                    loading="eager"
-                    decoding="sync"
                     draggable="false"
                 >
             `).join("")}
@@ -393,68 +521,56 @@ function openLightbox(startIndex = 0){
     const images =
         track.querySelectorAll("img");
 
-    let current = startIndex;
-
     const counter =
         lightbox.querySelector(".lightbox-counter");
 
+    let current = startIndex;
+
     images[current].scrollIntoView({
-        behavior:"auto",
-        inline:"center"
+        behavior: "auto",
+        inline: "center"
     });
 
-    function updateCounter(){
-
+    function updateCounter() {
         counter.textContent =
             `${current + 1} / ${galleryImages.length}`;
     }
 
-    function showImage(index){
+    function showImage(index) {
 
         current = index;
 
         images[current].scrollIntoView({
-            behavior:"smooth",
-            inline:"center"
+            behavior: "smooth",
+            inline: "center"
         });
 
         updateCounter();
     }
 
-    // CLOSE
-
     lightbox
         .querySelector(".close-lightbox")
         .addEventListener("click", closeLightbox);
 
-    // NEXT
-
     lightbox
         .querySelector(".lightbox-next")
-        .addEventListener("click", ()=>{
+        .addEventListener("click", () => {
 
             showImage(
-                (current + 1) %
-                galleryImages.length
+                (current + 1) % galleryImages.length
             );
-
         });
-
-    // PREVIOUS
 
     lightbox
         .querySelector(".lightbox-prev")
-        .addEventListener("click", ()=>{
+        .addEventListener("click", () => {
 
             showImage(
                 current === 0
-                ? galleryImages.length - 1
-                : current - 1
+                    ? galleryImages.length - 1
+                    : current - 1
             );
-
         });
-
-    // TAP TO ZOOM
 
     images.forEach(img => {
 
@@ -462,185 +578,45 @@ function openLightbox(startIndex = 0){
 
             e.stopPropagation();
 
-            if(img.classList.contains("zoomed")){
+            images.forEach(i =>
+                i.classList.remove("zoomed")
+            );
 
-                img.classList.remove("zoomed");
-
-            }else{
-
-                images.forEach(i =>
-                    i.classList.remove("zoomed")
-                );
-
-                img.classList.add("zoomed");
-            }
-
+            img.classList.toggle("zoomed");
         });
-
     });
 
-    // KEYBOARD NAVIGATION
+    document.onkeydown = e => {
 
-    function keyHandler(e){
-
-        if(lightbox.style.display !== "block")
+        if (lightbox.style.display !== "block")
             return;
 
-        if(e.key === "Escape")
+        if (e.key === "Escape")
             closeLightbox();
 
-        if(e.key === "ArrowRight")
+        if (e.key === "ArrowRight")
             showImage(
-                (current + 1) %
-                galleryImages.length
+                (current + 1) % galleryImages.length
             );
 
-        if(e.key === "ArrowLeft")
+        if (e.key === "ArrowLeft")
             showImage(
                 current === 0
-                ? galleryImages.length - 1
-                : current - 1
+                    ? galleryImages.length - 1
+                    : current - 1
             );
-    }
-
-    lightbox.dataset.keyhandler = "true";
+    };
 }
 
-function closeLightbox(){
+function closeLightbox() {
 
-    if(!lightbox) return;
+    const lightbox =
+        document.getElementById("lightbox");
+
+    if (!lightbox) return;
 
     lightbox.style.display = "none";
-
     lightbox.innerHTML = "";
+
+    document.onkeydown = null;
 }
-
-if(lightbox){
-
-    lightbox.addEventListener("click", e => {
-
-        if(e.target === lightbox){
-
-            closeLightbox();
-        }
-
-    });
-
-}
-
-const backBtn = document.getElementById("backBtn");
-
-if (backBtn) {
-
-    backBtn.addEventListener("click", () => {
-
-        const returnUrl =
-            sessionStorage.getItem("returnUrl");
-
-        if (returnUrl) {
-
-            window.location.href = returnUrl;
-
-        } else {
-
-            window.history.back();
-
-        }
-
-    });
-
-}
-
-const slides =
-    document.querySelectorAll(".slideshow img");
-
-if (slides.length) {
-
-    let currentSlide = 0;
-
-    slides[currentSlide].classList.add("active");
-
-    setInterval(() => {
-
-        slides[currentSlide].classList.remove("active");
-
-        currentSlide =
-            (currentSlide + 1) % slides.length;
-
-        slides[currentSlide].classList.add("active");
-
-    }, 5000);
-}
-
-// ================= DEFAULT TAB =================
-
-window.addEventListener("load", () => {
-
-    document
-        .getElementById("apartments")
-        ?.classList.add("active");
-});
-
-// ================= NAVBAR SCROLL EFFECT =================
-
-window.addEventListener("scroll", () => {
-
-    const navbar =
-        document.querySelector(".navbar");
-
-    if (!navbar) return;
-
-    if (window.scrollY > 50) {
-
-        navbar.style.background =
-            "rgba(17,17,17,0.95)";
-
-        navbar.style.backdropFilter =
-            "blur(10px)";
-
-    } else {
-
-        navbar.style.background =
-            "#111";
-
-        navbar.style.backdropFilter =
-            "none";
-    }
-});
-
-document
-    .querySelectorAll(".property-link")
-    .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            sessionStorage.setItem(
-                "returnUrl",
-                window.location.href
-            );
-
-            sessionStorage.setItem(
-                "returnScroll",
-                window.scrollY
-            );
-
-        });
-
-    });
-
-window.addEventListener("load", () => {
-
-    const savedScroll =
-        sessionStorage.getItem("returnScroll");
-
-    if (savedScroll) {
-
-        window.scrollTo({
-    top: Number(savedScroll),
-    behavior: "auto"
-});
-
-        sessionStorage.removeItem("returnScroll");
-    }
-
-});

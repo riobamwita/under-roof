@@ -1,404 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UnderRoof Properties</title>
+    <title>UnderRoof Properties</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="logo">
-        UNDERROOF
-    </div>
+        <div class="logo">
+            UNDERROOF
+        </div>
 
-    <nav id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#properties">Properties</a>
-        <a href="#realtors">Our Realtors</a>
-        <a href="#contact">Reach Us</a>
-    </nav>
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#realtors">Our Realtors</a>
+            <a href="#contact">Reach Us</a>
+        </nav>
 
-    <div class="menu-toggle" id="menuToggle">
-        ☰
-    </div>
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
 
-</header>
+    </header>
 
-<section class="hero" id="home">
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-    <div class="slideshow">
+        <div class="slideshow">
+            <img src="assets/background.jpg" class="active">
+            <img src="assets/background2.jpg">
+            <img src="assets/background3.jpeg">
+        </div>
 
-        <img src="assets/background.jpg" class="active">
-        <img src="assets/background2.jpg">
-        <img src="assets/background3.jpeg">
+        <div class="overlay"></div>
 
-    </div>
+        <div class="hero-content">
 
-    <div class="overlay"></div>
+            <h1>Find Your Perfect Property</h1>
 
-    <div class="hero-content">
+            <div class="search-box">
 
-        <h1>Find Your Perfect Property</h1>
+                <select id="propertyType">
+                    <option value="">Property Type</option>
+                    <option>Apartment</option>
+                    <option>Warehouse</option>
+                    <option>Land</option>
+                </select>
 
-        <div class="search-box">
+                <select id="location">
+                    <option value="">Location</option>
+                    <option>Nairobi</option>
+                    <option>Ruiru</option>
+                    <option>Thika</option>
+                    <option>Mombasa</option>
+                </select>
 
-            <select id="propertyType">
+                <select id="dealType">
+                    <option value="">Deal Type</option>
+                    <option>Sale</option>
+                    <option>Rent</option>
+                </select>
 
-                <option value="">Property Type</option>
-                <option>Apartment</option>
-                <option>Warehouse</option>
-                <option>Land</option>
+                <select id="priceRange">
+                    <option value="">Price Range</option>
+                    <option>Under 1M</option>
+                    <option>1M - 5M</option>
+                    <option>5M - 20M</option>
+                    <option>20M+</option>
+                </select>
 
-            </select>
+                <button id="searchBtn">Search</button>
 
-            <select id="location">
+            </div>
 
-                <option value="">Location</option>
-                <option>Nairobi</option>
-                <option>Ruiru</option>
-                <option>Thika</option>
-                <option>Mombasa</option>
+        </div>
 
-            </select>
+    </section>
 
-            <select id="dealType">
+    <!-- OFFERS -->
+    <section class="offers" id="offers">
 
-                <option value="">Deal Type</option>
-                <option>Sale</option>
-                <option>Rent</option>
+        <div class="offers-header">
 
-            </select>
+            <div>
+                <h2>Featured Offers</h2>
+                <p>Exclusive opportunities and current promotions</p>
+            </div>
 
-            <select id="priceRange">
-
-                <option value="">Price Range</option>
-                <option>Under 1M</option>
-                <option>1M - 5M</option>
-                <option>5M - 20M</option>
-                <option>20M+</option>
-
-            </select>
-
-            <button id="searchBtn">
-                Search
+            <button class="offers-toggle" id="offersToggle">
+                View Offers
             </button>
 
         </div>
 
-    </div>
+        <div class="offers-container" id="offersContainer">
 
-</section>
+            <div class="offers-grid">
 
-<section class="offers" id="offers">
+                <div class="offer-card">
+                    <img src="assets/companyadposter.jpg">
+                </div>
 
-    <div class="offers-header">
+                <div class="offer-card">
+                    <img src="assets/companycontactposter.jpg">
+                </div>
 
-        <div>
-            <h2>Featured Offers</h2>
-            <p>Exclusive opportunities and current promotions</p>
-        </div>
+                <div class="offer-card">
+                    <img src="assets/kenolad.jpg">
+                </div>
 
-        <button class="offers-toggle" id="offersToggle">
-            View Offers
-        </button>
-
-    </div>
-
-    <div class="offers-container" id="offersContainer">
-
-        <div class="offers-grid">
-
-            <div class="offer-card">
-                <img src="assets/companyadposter.jpg">
-            </div>
-
-            <div class="offer-card">
-                <img src="assets/companycontactposter.jpg">
-            </div>
-
-            <div class="offer-card">
-                <img src="assets/kenolad.jpg">
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- PROPERTIES -->
+    <section class="properties" id="properties">
 
-<section class="properties" id="properties">
+        <h2>Properties</h2>
 
-    <h2>Properties</h2>
+        <div class="tabs">
 
-    <div class="tabs">
-
-        <button class="tab-btn active" data-tab="apartments">
-            Apartments
-        </button>
-
-        <button class="tab-btn" data-tab="land">
-            Land
-        </button>
-
-        <button class="tab-btn" data-tab="warehouses">
-            Warehouses
-        </button>
-
-    </div>
-
-    <!-- APARTMENTS -->
-    <div id="apartments" class="tab-content active">
-
-        <div class="property-search">
-
-            <select>
-                <option>Location</option>
-                <option>Kenol</option>
-                <option>Diani</option>
-            </select>
-
-            <select>
-                <option>Bedrooms</option>
-                <option>4 Bedrooms</option>
-                <option>5 Bedrooms</option>
-            </select>
-
-            <select>
-                <option>Sale / Rent</option>
-                <option>Sale</option>
-                <option>Rent</option>
-            </select>
-
-            <button>Search</button>
+            <button class="tab-btn active" data-tab="apartments">Apartments</button>
+            <button class="tab-btn" data-tab="land">Land</button>
+            <button class="tab-btn" data-tab="warehouses">Warehouses</button>
 
         </div>
 
-        <div class="property-grid">
+        <!-- APARTMENTS -->
+        <div id="apartments" class="tab-content active">
 
-            <a href="property.html?id=kenol" class="property-card property-link">
+            <div class="property-search">
 
-                <img src="assets/kenolhouse.jpg" alt="Luxury Family Home">
+                <select>
+                    <option>Location</option>
+                    <option>Kenol</option>
+                    <option>Diani</option>
+                </select>
 
-                <div class="property-info">
-                    <h3>Luxury Family Home</h3>
-                    <p>Kenol</p>
-                    <span>KES 18,500,000</span>
-                </div>
+                <select>
+                    <option>Bedrooms</option>
+                    <option>4 Bedrooms</option>
+                    <option>5 Bedrooms</option>
+                </select>
 
-            </a>
+                <select>
+                    <option>Sale / Rent</option>
+                    <option>Sale</option>
+                    <option>Rent</option>
+                </select>
 
-            <a href="property.html?id=diani" class="property-card property-link">
+                <button>Search</button>
 
-                <img src="assets/dianihouse.jpg" alt="Beachfront Villa">
+            </div>
 
-                <div class="property-info">
-                    <h3>Beachfront Villa</h3>
-                    <p>Diani</p>
-                    <span>KES 42,000,000</span>
-                </div>
+            <div class="property-grid">
 
-            </a>
+                <a href="property.html?id=kenol" class="property-card property-link">
+                    <img src="assets/kenolhouse.jpg" alt="Luxury Family Home">
+                    <div class="property-info">
+                        <h3>Luxury Home</h3>
+                        <p>Kenol</p>
+                        <span>KES 18,500,000</span>
+                    </div>
+                </a>
 
-        </div>
+                <a href="property.html?id=diani" class="property-card property-link">
+                    <img src="assets/dianihouse.jpg" alt="Beachfront Villa">
+                    <div class="property-info">
+                        <h3>Beachfront Villa</h3>
+                        <p>Diani</p>
+                        <span>KES 42,000,000</span>
+                    </div>
+                </a>
 
-    </div>
+                <a href="property.html?id=nairobihouse" class="property-card property-link">
+                    <img src="assets/nairobi house.jpg" alt="Luxury Nairobi Home">
+                    <div class="property-info">
+                        <h3>Luxury Home</h3>
+                        <p>Nairobi</p>
+                        <span>KES 35,000,000</span>
+                    </div>
+                </a>
 
-    <!-- LAND -->
-    <div id="land" class="tab-content">
-
-        <div class="property-search">
-
-            <select>
-                <option>Location</option>
-                <option>Matuu</option>
-            </select>
-
-            <select>
-                <option>Size</option>
-                <option>1 Acre</option>
-            </select>
-
-            <select>
-                <option>Price Range</option>
-                <option>Under 5M</option>
-            </select>
-
-            <button>Search</button>
-
-        </div>
-
-        <div class="property-grid">
-
-            <a href="property.html?id=matuu" class="property-card property-link">
-
-                <img src="assets/matuuland.jpeg" alt="Prime Land">
-
-                <div class="property-info">
-                    <h3>Prime Land</h3>
-                    <p>Matuu</p>
-                    <span>KES 2,500,000</span>
-                </div>
-
-            </a>
+            </div>
+            
+            <button class="view-more-btn" data-target="apartments">
+             View More
+            </button>
 
         </div>
 
-    </div>
+        <!-- LAND -->
+        <div id="land" class="tab-content">
 
-    <!-- WAREHOUSES -->
-    <div id="warehouses" class="tab-content">
+            <div class="property-search">
 
-        <div class="property-search">
+                <select>
+                    <option>Location</option>
+                    <option>Matuu</option>
+                </select>
 
-            <select>
-                <option>Location</option>
-            </select>
+                <select>
+                    <option>Size</option>
+                    <option>1 Acre</option>
+                </select>
 
-            <select>
-                <option>Size (Sq Ft)</option>
-            </select>
+                <select>
+                    <option>Price Range</option>
+                    <option>Under 5M</option>
+                </select>
 
-            <select>
-                <option>Sale / Rent</option>
-            </select>
+                <button>Search</button>
 
-            <button>Search</button>
+            </div>
+
+            <div class="property-grid">
+
+                <a href="property.html?id=matuu" class="property-card property-link">
+                    <img src="assets/matuuland.jpeg" alt="Prime Land">
+                    <div class="property-info">
+                        <h3>Prime Land</h3>
+                        <p>Matuu</p>
+                        <span>KES 2,500,000</span>
+                    </div>
+                </a>
+
+                <a href="property.html?id=dianiland" class="property-card property-link">
+                    <img src="assets/dianiland.jpeg" alt="Prime Beachside Land">
+                    <div class="property-info">
+                        <h3>Prime Beachside Land</h3>
+                        <p>Diani</p>
+                        <span>KES 8,500,000</span>
+                    </div>
+                </a>
+
+            </div>
+            <button class="view-more-btn" data-target="land">
+             View More
+            </button>
 
         </div>
 
-        <div class="property-grid">
+        <!-- WAREHOUSES -->
+        <div id="warehouses" class="tab-content">
 
-            <a href="property.html?id=warehouse" class="property-card property-link">
+            <div class="property-search">
 
-                <div class="property-info">
-                    <h3>Coming Soon</h3>
-                    <p>Warehouse Listings</p>
-                </div>
+                <select>
+                    <option>Location</option>
+                </select>
 
-            </a>
+                <select>
+                    <option>Size (Sq Ft)</option>
+                </select>
+
+                <select>
+                    <option>Sale / Rent</option>
+                </select>
+
+                <button>Search</button>
+
+            </div>
+
+            <div class="property-grid">
+
+                <a href="property.html?id=warehouse" class="property-card property-link">
+                    <div class="property-info">
+                        <h3>Coming Soon</h3>
+                        <p>Warehouse Listings</p>
+                    </div>
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- REALTORS -->
+    <section class="realtors-section" id="realtors">
 
-<section class="realtors-section" id="realtors">
+        <div class="section-head">
+            <h2>Our Realtors</h2>
+            <p>Experienced property professionals across Kenya.</p>
+        </div>
 
-    <div class="section-head">
-        <h2>Our Realtors</h2>
-        <p>Experienced property professionals across Kenya.</p>
-    </div>
+        <div class="realtors-row">
 
-    <div class="realtors-row">
-
-        <div class="realtor-card">
-            <img src="assets/realtor1.png" alt="">
-            <div>
+            <div class="realtor-card">
+                <img src="assets/realtor1.png">
                 <h3>Brian Mwangi</h3>
                 <span>Senior Property Consultant</span>
             </div>
-        </div>
 
-        <div class="realtor-card featured">
-            <img src="assets/realtor2.png" alt="">
-            <div>
+            <div class="realtor-card featured">
+                <img src="assets/realtor2.png">
                 <h3>Faith Wanjiku</h3>
                 <span>Luxury Homes Specialist</span>
             </div>
-        </div>
 
-        <div class="realtor-card">
-            <img src="assets/realtor3.png" alt="">
-            <div>
+            <div class="realtor-card">
+                <img src="assets/realtor3.png">
                 <h3>Kevin Otieno</h3>
                 <span>Commercial Property Advisor</span>
             </div>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- CONTACT -->
+    <section class="contact-modern" id="contact">
 
-<section class="contact-modern" id="contact">
+        <div class="contact-left">
 
-    <div class="contact-left">
+            <div class="location-content">
 
-        <div class="location-content">
-            <span class="contact-tag">UNDERROOF PROPERTIES</span>
+                <span class="contact-tag">UNDERROOF PROPERTIES</span>
 
-            <h2>Let's Find Your Next Property</h2>
+                <h2>Let's Find Your Next Property</h2>
 
-            <p>
-                Visit our offices, call our agents, or chat with us instantly.
-                We're ready to help you secure your next investment.
-            </p>
+                <p>
+                    Visit our offices, call our agents, or chat with us instantly.
+                </p>
 
-            <div class="office-location">
-
-                <img src="assets/locationicon.png">
-
-                <div>
-                    <strong>Head Office</strong>
-                    <p>Nairobi, Kenya</p>
+                <div class="office-location">
+                    <img src="assets/locationicon.png">
+                    <div>
+                        <strong>Head Office</strong>
+                        <p>Nairobi, Kenya</p>
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+        <div class="contact-right">
 
-    <div class="contact-right">
+            <h3>Get In Touch</h3>
 
-        <h3>Get In Touch</h3>
+            <a href="https://wa.me/254700000000" class="action-btn whatsapp">
+                <img src="assets/whatsappicon.png">
+                Chat on WhatsApp
+            </a>
 
-        <a href="https://wa.me/254700000000" class="action-btn whatsapp">
-            <img src="assets/whatsappicon.png">
-            Chat on WhatsApp
-        </a>
+            <a href="tel:+254700000000" class="action-btn phone">
+                <img src="assets/phoneicon.png">
+                Call Us
+            </a>
 
-        <a href="tel:+254700000000" class="action-btn phone">
-            <img src="assets/phoneicon.png">
-            Call Us
-        </a>
+            <a href="mailto:info@underroof.co.ke" class="action-btn email">
+                <img src="assets/mailicon.png">
+                Send Email
+            </a>
 
-        <a href="mailto:info@underroof.co.ke" class="action-btn email">
-            <img src="assets/mailicon.png">
-            Send Email
-        </a>
+        </div>
 
-        <div class="social-section">
+    </section>
 
-    <span class="social-label">Follow Us</span>
-
-    <div class="social-row">
-
-        <a href="#">
-            <img src="assets/facebook.png">
-        </a>
-
-        <a href="#">
-            <img src="assets/instagramicon.png">
-        </a>
-
-    </div>
-
-    </div>
-
-    </div>
-
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
