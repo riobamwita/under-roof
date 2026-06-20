@@ -67,10 +67,20 @@
                 </select>
 
                 <select id="priceRange">
+                    <option value="">Price Range</option>
+                    <option value="0-5000000">Under KES 5M</option>
+                    <option value="5000000-10000000">KES 5M - 10M</option>
+                    <option value="10000000-20000000">KES 10M - 20M</option>
+                    <option value="20000000-50000000">KES 20M - 50M</option>
+                    <option value="50000000+">Above KES 50M</option>
                 </select>
 
                 <button id="searchBtn">
                     Search
+                </button>
+
+                <button id="clearBtn" style="display:none;">
+                    Clear
                 </button>
 
             </div>

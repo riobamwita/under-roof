@@ -162,19 +162,6 @@ function loadGallery() {
     });
 }
 
-function setupBackButton() {
-
-    const btn =
-        document.getElementById("backBtn");
-
-    if (!btn) return;
-
-    btn.addEventListener("click", () => {
-
-        window.location.href = "index.html";
-    });
-}
-
 function setupLightbox() {
 
     const lightbox =
@@ -321,4 +308,23 @@ function setupInquiryForm() {
 
         form.reset();
     });
+}
+
+function setupBackButton() {
+
+    const btn = document.getElementById("backBtn");
+
+    if (!btn) return;
+
+    btn.addEventListener("click", () => {
+
+        const section =
+            sessionStorage.getItem("returnSection") ||
+            "apartments";
+
+        window.location.href =
+            `index.html#${section}`;
+
+    });
+
 }
