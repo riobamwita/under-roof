@@ -318,12 +318,11 @@ function setupBackButton() {
 
     btn.addEventListener("click", () => {
 
-        const section =
-            sessionStorage.getItem("returnSection") ||
-            "apartments";
-
-        window.location.href =
-            `index.html#${section}`;
+        if (history.length > 1) {
+            history.back();
+        } else {
+            window.location.href = "index.html?return=true";
+        }
 
     });
 

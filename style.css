@@ -1,922 +1,724 @@
-/* ==========================================
-   RESET
-========================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 85%;
+html{
+    scroll-behavior:smooth;
+    font-size:85%;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f8f8f8;
-    color: #222;
-    line-height: 1.5;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f8f8;
+    color:#222;
+    line-height:1.5;
 }
 
-/* ==========================================
-   NAVBAR
-========================================== */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #111;
-    padding: 14px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+img{
+    max-width:100%;
+    display:block;
 }
 
-.logo {
-    color: #d4af37;
-    font-size: 1.4rem;
-    font-weight: 700;
+a{
+    text-decoration:none;
 }
 
-.navbar nav {
-    display: flex;
-    gap: 25px;
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#111;
+    padding:16px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
 }
 
-.navbar nav a {
-    color: #fff;
-    text-decoration: none;
-    transition: .3s;
+.logo{
+    color:#d4af37;
+    font-size:1.5rem;
+    font-weight:700;
+    letter-spacing:1px;
 }
 
-.navbar nav a:hover {
-    color: #d4af37;
+.navbar nav{
+    display:flex;
+    gap:30px;
 }
 
-.menu-toggle {
-    display: none;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
+.navbar nav a{
+    color:#fff;
+    font-size:1rem;
+    transition:.3s;
 }
 
-/* ==========================================
-   HERO
-========================================== */
+.navbar nav a:hover{
+    color:#d4af37;
+}
 
-.hero {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+.menu-toggle{
+    display:none;
+}
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
 }
 
 .slideshow,
 .slideshow img,
-.overlay {
-    position: absolute;
-    inset: 0;
+.overlay{
+    position:absolute;
+    inset:0;
 }
 
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: 1s;
+.slideshow img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:1s ease;
 }
 
-.slideshow img.active {
-    opacity: 1;
+.slideshow img.active{
+    opacity:1;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, .55);
+.overlay{
+    background:rgba(0,0,0,.55);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
 }
 
-.hero-content h1 {
-    font-size: 2.7rem;
-    margin-bottom: 20px;
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:25px;
 }
 
-.search-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    background: rgba(255, 255, 255, .96);
-    backdrop-filter: blur(10px);
-    padding: 7px;
-    border-radius: 52px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .18);
-    max-width: 750px;
-    width: 100%;
+button{
+    transition:.3s;
+    cursor:pointer;
 }
 
-.search-box select {
-    border: none;
-    background: transparent;
-    padding: 12px 16px;
-    min-width: 135px;
-    font-size: .95rem;
-    color: #555;
-    outline: none;
+button:hover{
+    transform:translateY(-2px);
 }
 
-.search-box select:not(:last-of-type) {
-    border-right: 1px solid #ececec;
+section{
+    padding:30px 6%;
 }
 
-.search-box button {
-    background: #d4af37;
-    color: #111;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 38px;
-    font-weight: 600;
-    margin-left: 6px;
-    font-size: .8rem;
-    box-shadow: 0 10px 25px rgba(212, 175, 55, .35);
+.section-head{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-/* ==========================================
-   BUTTONS
-========================================== */
-
-button {
-    background: #d4af37;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
+.section-head h2{
+    font-size:2.2rem;
+    margin-bottom:10px;
 }
 
-button:hover {
-    transform: translateY(-2px);
+.section-head p{
+    color:#777;
 }
 
-/* ==========================================
-   COMMON SECTIONS
-========================================== */
-
-section {
-    padding: 60px 6%;
+.offers{
+    background:#fff;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1px;
+.offers-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-bottom:25px;
 }
 
-.offers-subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 20px;
+.offers-toggle{
+    border:none;
+    background:#d4af37;
+    color:#131212;
+    padding:10px 20px;
+    border-radius:40px;
 }
 
-/* ==========================================
-   OFFERS
-========================================== */
-
-.offers {
-    background: #fff;
-    position: relative;
-    padding: 40px 3%;
+.offers-container{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .8s ease;
 }
 
-.offers-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 25px;
-    text-align: center;
+.offers-container.active{
+    max-height:900px;
 }
 
-.offers-header h2 {
-    text-align: left;
-    margin-bottom: 5px;
+.offers-grid{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    scrollbar-width:none;
 }
 
-.offers-header p {
-    color: #777;
+.offers-grid::-webkit-scrollbar{
+    display:none;
 }
 
-.offers-toggle {
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 50px;
+.offer-card{
+    flex: 0 0 240px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
 }
 
-.offers-container {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .9s ease;
+.offer-card.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.offers-container.active {
-    max-height: 700px;
+.offer-card img{
+    width:100%;
+    height:375px;
+    object-fit:cover;
 }
 
-.offers-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 20px;
-    scrollbar-width: none;
+.property-search{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+
+    background:#fff;
+    border-radius:50px;
+    padding:6px;
+
+    width:fit-content;
+    max-width:900px;
+    margin:0 auto 30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    overflow-x:auto;
+    scrollbar-width:none;
 }
 
-.offers-grid::-webkit-scrollbar {
-    display: none;
+.property-search::-webkit-scrollbar{
+    display:none;
 }
 
-.offer-card {
-    flex: 0 0 290px;
-    border-radius: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity .9s ease, transform .9s ease;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+.property-search select{
+    border:none;
+    outline:none;
+
+    min-width:120px;
+    padding:10px 12px;
+
+    background:transparent;
+    color:#555;
+
+    font-size:.9rem;
+    font-weight:600;
+    flex-shrink:0;
 }
 
-.offer-card.show {
-    opacity: 1;
-    transform: translateY(0);
+.property-search select:not(:last-of-type){
+    border-right:1px solid #eee;
 }
 
-.offer-card img {
-    width: 100%;
-    height: 430px;
-    object-fit: cover;
-    display: block;
+.property-search button{
+    border:none;
+    background:#d4af37;
+    color:#111;
+
+    padding:10px 18px;
+    border-radius:30px;
+
+    font-weight:600;
+    white-space:nowrap;
+    flex-shrink:0;
 }
 
-.offers::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 120px;
-    width: 120px;
-    height: 520px;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1)
-    );
-    pointer-events: none;
+#propertyClearBtn{
+    background:#111;
+    color:#fff;
 }
 
-/* ==========================================
-   PROPERTY TABS
-========================================== */
-
-.tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin: 18px 0;
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
-.tab-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    color: #666;
-    font-size: 1.2rem;
-    font-weight: 600;
-    position: relative;
+.property-card{
+    background:#fff;
+    color:#222;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 
-.tab-btn:hover {
-    color: #d4af37;
+.property-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
-.tab-btn.active {
-    color: #d4af37;
+.property-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
 }
 
-.tab-btn.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 100%;
-    height: 2px;
-    background: #d4af37;
+.property-info{
+    padding:14px;
 }
 
-.tab-content {
-    display: none;
+.property-info h3{
+    margin-bottom:8px;
 }
 
-.tab-content.active {
-    display: block;
+.property-info p{
+    color:#777;
+    margin-bottom:10px;
 }
 
-/* ==========================================
-   PROPERTY SEARCH
-========================================== */
-
-.property-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    background: #fff;
-    border-radius: 45px;
-    padding: 6px;
-    max-width: 675px;
-    margin: 0 auto 25px;
-    box-shadow: 0 9px 26px rgba(0, 0, 0, .08);
+.property-info span{
+    color:#d4af37;
+    font-weight:600;
 }
 
-.property-search select {
-    border: none;
-    background: transparent;
-    padding: 10px 15px;
-    min-width: 135px;
-    font-size: 1rem;
-    color: #555;
-    outline: none;
+.property-card.hidden{
+    display:none;
 }
 
-.property-search select:not(:last-of-type) {
-    border-right: 1px solid #eee;
+.view-more-btn{
+    display:block;
+    margin:30px auto 0;
+    border:none;
+    background:#d4af37;
+    color:#111;
+    padding:10px 20px;
+    border-radius:35px;
+    font-weight:600;
 }
 
-.property-search button {
-    border: none;
-    background: #d4af37;
-    color: #111;
-    padding: 10px 21px;
-    border-radius: 30px;
-    font-weight: 600;
-    margin-left: 6px;
+.view-more-btn:hover{
+    background:#c19b2e;
 }
 
-/* ==========================================
-   PROPERTY GRID
-========================================== */
-
-.property-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
-    justify-content: center;
-    gap: 24px;
+.realtors-section{
+    background:#fff;
 }
 
-.property-card {
-    display: block;
-    text-decoration: none;
-    color: #222;
-    background: #fff;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
-    transition: .3s;
+.realtors-section .section-head {
+    margin-bottom: 18px;
 }
 
-.property-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+.realtors-section .section-head p {
+    margin-bottom: 0;
 }
 
-.property-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
+.realtors-row{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.property-info {
-    padding: 16px;
+.realtor-card{
+    width:220px;
+    background:#fff;
+    border:1px solid #eee;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+    transition:.3s;
 }
 
-.property-info h3 {
-    margin-bottom: 6px;
+.realtor-card:hover{
+    transform:translateY(-5px);
 }
 
-.property-info p {
-    color: #666;
-    margin-bottom: 8px;
+.realtor-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 15px;
 }
 
-.property-info span {
-    color: #d4af37;
-    font-weight: 600;
+.realtor-card h3{
+    margin-bottom:5px;
 }
 
-/* ==========================================
-   REALTORS
-========================================== */
-
-.realtors-section {
-    background: #fff;
-    padding: 60px 6%;
+.realtor-card span{
+    color:#d4af37;
+    font-size:.9rem;
 }
 
-.section-head {
-    text-align: center;
-    margin-bottom: 35px;
+.featured{
+    border:2px solid #d4af37;
 }
 
-.section-head h2 {
-    margin-bottom: 8px;
-}
-
-.section-head p {
-    color: #777;
-}
-
-.realtors-row {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.realtor-card {
-    width: 180px;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 18px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: .3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
-}
-
-.realtor-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
-}
-
-.realtor-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
-}
-
-.realtor-card h3 {
-    font-size: .95rem;
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.realtor-card span {
-    font-size: .8rem;
-    color: #d4af37;
-    display: block;
-}
-
-.featured {
-    border: 2px solid #d4af37;
-}
-
-/* ==========================================
-   CONTACT
-========================================== */
 
 .contact-modern {
     display: grid;
-    grid-template-columns: 1.3fr .8fr;
-    min-height: 650px;
+    grid-template-columns: 1.2fr .8fr;
+    
     background: #fff;
-    overflow: hidden;
 }
 
 .contact-left {
-    position: relative;
     background:
         linear-gradient(
-            rgba(0, 0, 0, .55),
-            rgba(0, 0, 0, .55)
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.65)
         ),
-        url("assets/background3.jpeg");
+        url("assets/background2.jpg");
+
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 60px;
-}
 
-.location-content {
-    max-width: 550px;
     color: #fff;
-}
-
-.contact-tag {
-    display: inline-block;
-    background: #d4af37;
-    color: #111;
-    padding: 8px 18px;
-    border-radius: 40px;
-    font-size: .85rem;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.location-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.location-content p {
-    color: #ddd;
-    margin-bottom: 35px;
-}
-
-.office-location {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.office-location img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-    flex-shrink: 0;
+    padding: 35px;
 }
 
 .contact-right {
-    padding: 55px 40px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #fafafa;
+}
+
+.location-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.location-content p {
+    color: rgba(255,255,255,.85);
+    margin-bottom: 25px;
 }
 
 .contact-right h3 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.contact-actions-social{
+    display:flex;
+    align-items:flex-start;
+    gap:40px;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .action-btn {
-    position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
-    margin-bottom: 12px;
+    gap: 12px;
     text-decoration: none;
-    color: #222;
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 14px;
-    font-size: .95rem;
-    font-weight: 500;
-    transition: .35s ease;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
-    max-width: 320px;
-}
-
-.action-btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: .35s;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #111;
+    background: #f5f5f5;
+    transition: .3s;
+    width:fit-content;
+    min-width:180px;
 }
 
 .action-btn:hover {
-    transform: translateX(6px);
-    color: #111;
-}
-
-.action-btn:hover::before {
-    opacity: .12;
+    transform: translateY(-2px);
 }
 
 .action-btn img {
-    width: 26px;
-    height: 26px;
-    position: relative;
-    z-index: 2;
+    width: 22px;
+    height: 22px;
 }
 
-.whatsapp::before {
-    background: #25D366;
+.follow-us{
+    margin-left:0;
+    min-width:120px;
+    text-align:center;
+    padding-top:8px;
 }
 
-.phone::before {
-    background: #007AFF;
+.follow-us h4{
+    font-size:1rem;
+    margin-bottom:12px;
+    color:#222;
 }
 
-.email::before {
-    background: #EA4335;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
-.whatsapp:hover {
-    border-color: #25D366;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, .25);
-}
-
-.phone:hover {
-    border-color: #007AFF;
-    box-shadow: 0 10px 25px rgba(0, 122, 255, .25);
-}
-
-.email:hover {
-    border-color: #EA4335;
-    box-shadow: 0 10px 25px rgba(234, 67, 53, .25);
-}
-
-/* ==========================================
-   UTILITIES
-========================================== */
-
-.blank-section {
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     background: #fff;
-    padding: 50px 6%;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.blank-section p {
-    text-align: center;
-    margin-top: 10px;
+.social-icons img {
+    width: 20px;
+    height: 20px;
 }
 
-.property-card.hidden {
-    display: none;
+#noResults{
+    text-align:center;
+    padding:30px;
 }
 
-.view-more-btn {
-    display: block;
-    margin: 25px auto 0;
-    padding: 10px 22px;
-    border: none;
-    background: #111;
-    color: #fff;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
+.office-location{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(6px);
+
+    padding:18px 22px;
+    border-radius:14px;
+
+    width:fit-content;
+    margin-top:25px;
 }
 
-.coming-soon-message {
-    text-align: center;
-    margin-top: 20px;
-    color: #777;
-    font-size: 0.95rem;
-    font-weight: 500;
+.location-icon{
+    width:55px;
+    height:55px;
+
+    background:#d4af37;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
 }
 
-/* ==========================================
-   MOBILE OVERRIDE (COMPACT + DESKTOP-LIKE SEARCH)
-========================================== */
-
-@media (max-width: 992px) {
-
-    html {
-        font-size: 78%;
-    }
-
-    /* NAVBAR */
-    .navbar {
-        padding: 12px 5%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #111;
-        flex-direction: column;
-        display: none;
-    }
-
-    .navbar nav.active {
-        display: flex;
-    }
-
-    .navbar nav a {
-        padding: 14px 18px;
-        border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    /* HERO - MORE COMPACT */
-    .hero-content h1 {
-        font-size: 2rem;
-        margin-bottom: 14px;
-    }
-
-    /* KEEP SEARCH HORIZONTAL (IMPORTANT FIX) */
-    .search-box {
-        flex-wrap: nowrap;         /* FORCE horizontal */
-        overflow-x: auto;
-        gap: 6px;
-        padding: 8px;
-        border-radius: 40px;
-        max-width: 95%;
-    }
-
-    .search-box select {
-        min-width: 140px;
-        font-size: 0.85rem;
-        padding: 10px 12px;
-        border-right: 1px solid #eee !important;
-        border-bottom: none !important;
-    }
-
-    .search-box button {
-        white-space: nowrap;
-        padding: 10px 18px;
-        font-size: 0.8rem;
-        border-radius: 30px;
-    }
-
-    /* OFFERS */
-    .offers-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .offer-card {
-        flex: 0 0 240px;
-    }
-
-    .offer-card img {
-        height: 320px;
-    }
-
-    /* PROPERTY SEARCH - KEEP HORIZONTAL LIKE DESKTOP */
-    .property-search {
-        flex-wrap: nowrap;        /* FORCE single row */
-        overflow-x: auto;
-        gap: 6px;
-        padding: 8px;
-        border-radius: 40px;
-    }
-
-    .property-search select {
-        min-width: 140px;
-        font-size: 0.85rem;
-        padding: 10px 12px;
-        border-right: 1px solid #eee !important;
-        border-bottom: none !important;
-    }
-
-    .property-search button {
-        white-space: nowrap;
-        padding: 10px 16px;
-        font-size: 0.8rem;
-    }
-
-    /* ⭐ KEY CHANGE: 2 CARDS PER ROW ON MOBILE */
-    .property-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    }
-
-    .property-card img {
-        height: 160px;
-    }
-
-    .property-info {
-        padding: 10px;
-    }
-
-    .property-info h3 {
-        font-size: 0.95rem;
-    }
-
-    .property-info p {
-        font-size: 0.8rem;
-    }
-
-    /* REALTORS - MORE COMPACT */
-    .realtor-card {
-        width: 48%;
-        padding: 12px;
-    }
-
-    .realtor-card img {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* CONTACT */
-    .contact-modern {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-left {
-        min-height: 280px;
-        padding: 25px;
-    }
-
-    .contact-right {
-        padding: 25px;
-    }
-
-    .location-content h2 {
-        font-size: 1.7rem;
-    }
-
-    .action-btn {
-        max-width: 100%;
-        padding: 12px;
-        font-size: 0.85rem;
-    }
+.location-icon img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
 }
 
-/* ==========================================
-   SMALL PHONES (EXTRA COMPACT)
-========================================== */
+.location-text strong{
+    display:block;
+    font-size:1.1rem;
+    margin-bottom:3px;
+}
 
-@media (max-width: 480px) {
+.location-text p{
+    margin:0;
+    color:rgba(255,255,255,.8);
+}
 
-    html {
-        font-size: 74%;
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+        color:#fff;
+        font-size:1.8rem;
+        cursor:pointer;
     }
 
-    .hero-content h1 {
-        font-size: 1.5rem;
+    .navbar nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        display:none;
+        padding:20px;
     }
 
-    /* STILL HORIZONTAL BUT SCROLLABLE */
-    .search-box,
-    .property-search {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding: 6px;
+    .navbar nav.active{
+        display:flex;
     }
 
-    .search-box select,
-    .property-search select {
-        min-width: 120px;
-        font-size: 0.8rem;
+    .property-search{
+    width:95%;
+    margin:0 auto 30px;
+
+    display:flex;
+    flex-wrap:nowrap;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:4px;
+
+    padding:6px 8px;
+    border-radius:50px;
+
+    overflow:hidden; /* remove scroll */
+}
+
+.property-search select{
+    flex:1 1 0;
+    min-width:0;
+
+    padding:6px 6px;
+    font-size:.7rem;
+
+    border-right:1px solid #eee;
+}
+
+.property-search select:last-of-type{
+    border-right:none;
+}
+
+.property-search button{
+    flex:0 0 auto;
+    padding:6px 10px;
+    font-size:.7rem;
+    white-space:nowrap;
+}
+
+    .property-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.property-card img{
+    height:180px; /* was 250px */
+}
+
+.property-info{
+    padding:12px;
+}
+
+.property-info h3{
+    font-size:.95rem;
+    margin-bottom:5px;
+}
+
+.property-info p{
+    font-size:.8rem;
+    margin-bottom:6px;
+}
+
+.property-info span{
+    font-size:.85rem;
+}
+
+    .contact-modern{
+        grid-template-columns:1fr;
     }
 
-    .search-box button,
-    .property-search button {
-        padding: 10px 14px;
-        font-size: 0.75rem;
+    .contact-left,
+    .contact-right{
+        padding:40px 25px;
     }
 
-    /* KEEP 2-COLUMN GRID EVEN ON SMALL PHONES */
-    .property-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
+    .location-content h2{
+        font-size:2rem;
     }
 
-    .property-card img {
-        height: 140px;
+    .contact-actions-social{
+        display:flex;
+        align-items:flex-start;
+        justify-content:flex-start;
+        gap:20px;
     }
 
-    .property-info {
-        padding: 8px;
+    .follow-us{
+        min-width:90px;
+        padding-top:6px;
     }
 
-    .property-info h3 {
-        font-size: 0.85rem;
-    }
+.contact-actions{
+    align-items:flex-start;
+    gap:8px;
+}
 
-    .property-info p {
-        font-size: 0.75rem;
-    }
+.action-btn{
+    padding:10px 12px;
+    font-size:.8rem;
+    border-radius:10px;
+    width:auto;
+    display:inline-flex;
+}
 
-    .realtor-card {
-        width: 48%;
-    }
+.action-btn img{
+    width:18px;
+    height:18px;
+}
 
-    .view-more-btn,
-    .offers-toggle {
-        width: 100%;
-    }
+.social-icons{
+    gap:8px;
+}
+
+.social-icons a{
+    width:36px;
+    height:36px;
+}
+
+.social-icons img{
+    width:16px;
+    height:16px;
+}
+
+.realtors-row{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:20px;
+
+    padding:10px 6%;
+    -webkit-overflow-scrolling:touch;
+
+    scroll-snap-type:x mandatory;
+    justify-content:flex-start;
+}
+
+.realtors-row::-webkit-scrollbar{
+    display:none;
+}
+
+.realtor-card{
+    width:220px;
+    flex:0 0 auto; 
+    scroll-snap-align:center;
+
+    transform:none;
+    opacity:1;
+}
+
+.realtor-card:hover{
+    transform:translateY(-5px); 
+}
+
 }

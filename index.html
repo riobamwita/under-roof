@@ -49,47 +49,10 @@
 
             <h1>Find Your Perfect Property</h1>
 
-            <div class="search-box">
-
-                <!-- AUTO POPULATED -->
-                <select id="propertyType">
-                    <option value="">Property Type</option>
-                </select>
-
-                <!-- AUTO POPULATED -->
-                <select id="location">
-                    <option value="">Location</option>
-                </select>
-
-                <!-- AUTO POPULATED -->
-                <select id="dealType">
-                    <option value="">Deal Type</option>
-                </select>
-
-                <select id="priceRange">
-                    <option value="">Price Range</option>
-                    <option value="0-5000000">Under KES 5M</option>
-                    <option value="5000000-10000000">KES 5M - 10M</option>
-                    <option value="10000000-20000000">KES 10M - 20M</option>
-                    <option value="20000000-50000000">KES 20M - 50M</option>
-                    <option value="50000000+">Above KES 50M</option>
-                </select>
-
-                <button id="searchBtn">
-                    Search
-                </button>
-
-                <button id="clearBtn" style="display:none;">
-                    Clear
-                </button>
-
-            </div>
-
         </div>
 
     </section>
 
-    <!-- OFFERS -->
     <section class="offers" id="offers">
 
         <div class="offers-header">
@@ -127,133 +90,59 @@
 
     </section>
 
-    <!-- PROPERTIES -->
     <section class="properties" id="properties">
 
-        <div class="section-head">
-            <h2>Properties</h2>
-        </div>
+    <div class="section-head">
+        <h2>Properties</h2>
+        <p>Browse houses, land and warehouses across Kenya</p>
+    </div>
 
-        <!-- HERO SEARCH RESULTS WILL FILTER THESE -->
-        <div class="tabs">
+    <div class="property-search">
 
-            <button class="tab-btn active" data-tab="apartments">
-                Apartments
-            </button>
+        <select id="propertyTypeFilter">
+            <option value="">Type</option>
+        </select>
 
-            <button class="tab-btn" data-tab="land">
-                Land
-            </button>
+        <select id="propertyLocationFilter">
+            <option value="">Location</option>
+        </select>
 
-            <button class="tab-btn" data-tab="warehouses">
-                Warehouses
-            </button>
+        <select id="propertyDealFilter">
+            <option value="">Deal</option>
+        </select>
 
-        </div>
+        <select id="propertyBedroomsFilter">
+            <option value="">Bedrooms</option>
+        </select>
 
-        <!-- APARTMENTS -->
-        <div id="apartments" class="tab-content active">
+        <select id="propertySizeFilter">
+            <option value="">Land Size</option>
+        </select>
 
-            <div class="property-search apartment-search">
+        <button id="propertySearchBtn">
+            Search
+        </button>
 
-                <select id="apartmentLocation">
-                    <option value="">Location</option>
-                </select>
+        <button id="propertyClearBtn" style="display:none;">
+            Clear
+        </button>
 
-                <select id="apartmentBedrooms">
-                    <option value="">Bedrooms</option>
-                </select>
+    </div>
 
-                <select id="apartmentDeal">
-                    <option value="">Deal Type</option>
-                </select>
+    <div class="property-grid" id="propertiesGrid">
+    </div>
 
-                <button id="apartmentSearchBtn">
-                    Search
-                </button>
+    <button class="view-more-btn" id="viewMoreBtn">
+        View More
+    </button>
 
-            </div>
-
-            <div class="property-grid" id="apartmentsGrid">
-                <!-- Auto Generated From JSON -->
-            </div>
-
-            <button class="view-more-btn" data-target="apartments">
-                View More
-            </button>
-
-        </div>
-
-        <!-- LAND -->
-        <div id="land" class="tab-content">
-
-            <div class="property-search land-search">
-
-                <select id="landLocation">
-                    <option value="">Location</option>
-                </select>
-
-                <select id="landSize">
-                    <option value="">Size</option>
-                </select>
-
-                <button id="landSearchBtn">
-                    Search
-                </button>
-
-            </div>
-
-            <div class="property-grid" id="landGrid">
-                <!-- Auto Generated From JSON -->
-            </div>
-
-            <button class="view-more-btn" data-target="land">
-                View More
-            </button>
-
-        </div>
-
-        <!-- WAREHOUSES -->
-        <div id="warehouses" class="tab-content">
-
-            <div class="property-search warehouse-search">
-
-                <select id="warehouseLocation">
-                    <option value="">Location</option>
-                </select>
-
-                <select id="warehouseDeal">
-                    <option value="">Deal Type</option>
-                </select>
-
-                <button id="warehouseSearchBtn">
-                    Search
-                </button>
-
-            </div>
-
-            <div class="property-grid" id="warehouseGrid">
-
-                <a href="#" class="property-card">
-
-                    <div class="property-info">
-                        <h3>Coming Soon</h3>
-                        <p>Warehouse Listings</p>
-                    </div>
-
-                </a>
-
-            </div>
-
-        </div>
-
-        <div id="noResults" style="display:none;">
+    <div id="noResults" style="display:none;">
         <h3>No properties found</h3>
-        </div>
+    </div>
 
     </section>
 
-    <!-- REALTORS -->
+    
     <section class="realtors-section" id="realtors">
 
         <div class="section-head">
@@ -285,28 +174,76 @@
 
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact-modern" id="contact">
+   
+<section class="contact-modern" id="contact">
 
-        <div class="contact-left">
+    <div class="contact-left">
 
-            <div class="location-content">
+        <div class="location-content">
 
-                <span class="contact-tag">UNDERROOF PROPERTIES</span>
+            <span class="contact-tag">UNDERROOF PROPERTIES</span>
 
-                <h2>Let's Find Your Next Property</h2>
+            <h2>Let's Find Your Next Property</h2>
 
-                <p>
-                    Visit our offices, call our agents, or chat with us instantly.
-                </p>
+            <p>
+                Visit our offices, call our agents, or chat with us instantly.
+            </p>
 
-                <div class="office-location">
-                    <img src="assets/locationicon.png">
+            <div class="office-location">
 
-                    <div>
-                        <strong>Head Office</strong>
-                        <p>Nairobi, Kenya</p>
-                    </div>
+            <div class="location-icon">
+            <img src="assets/locationicon.png" alt="Location">
+            </div>
+
+            <div class="location-text">
+            <strong>Head Office</strong>
+            <p>Nairobi, Kenya</p>
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="contact-right">
+
+        <h3>Get In Touch</h3>
+
+        <div class="contact-actions-social">
+
+            <div class="contact-actions">
+
+                <a href="https://wa.me/254700000000" class="action-btn whatsapp">
+                    <img src="assets/whatsappicon.png">
+                    Chat on WhatsApp
+                </a>
+
+                <a href="tel:+254700000000" class="action-btn phone">
+                    <img src="assets/phoneicon.png">
+                    Call Us
+                </a>
+
+                <a href="mailto:info@underroof.co.ke" class="action-btn email">
+                    <img src="assets/mailicon.png">
+                    Send Email
+                </a>
+
+            </div>
+
+            <div class="follow-us">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="assets/facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="assets/instagramicon.png" alt="Instagram">
+                    </a>
 
                 </div>
 
@@ -314,28 +251,9 @@
 
         </div>
 
-        <div class="contact-right">
+    </div>
 
-            <h3>Get In Touch</h3>
-
-            <a href="https://wa.me/254700000000" class="action-btn whatsapp">
-                <img src="assets/whatsappicon.png">
-                Chat on WhatsApp
-            </a>
-
-            <a href="tel:+254700000000" class="action-btn phone">
-                <img src="assets/phoneicon.png">
-                Call Us
-            </a>
-
-            <a href="mailto:info@underroof.co.ke" class="action-btn email">
-                <img src="assets/mailicon.png">
-                Send Email
-            </a>
-
-        </div>
-
-    </section>
+</section>
 
     <script src="script.js"></script>
 

@@ -6,46 +6,49 @@
     "price": 18500000,
     "formattedPrice": "KES 18,500,000",
     "location": "Kenol",
-    "type": "Apartment",
+    "type": "House",
     "deal": "Sale",
     "bedrooms": 4,
     "hero": "assets/kenolhouse.jpg",
     "thumbnail": "assets/kenolhouse.jpg",
-    "description": "Modern family home located in Kenol featuring spacious living areas, premium finishes, secure compound and easy access to major roads.",
+    "description": "Modern family home located in Kenol featuring spacious living areas, premium finishes and excellent road access.",
     "features": [
-      "4 Spacious Bedrooms",
+      "4 Bedrooms",
       "3 Bathrooms",
       "Modern Kitchen",
+      "Dining Area",
       "Private Balcony",
-      "Parking for 3 Cars",
       "Secure Compound"
     ],
     "gallery": [
       "assets/living1.jpg",
       "assets/kitchen1.jpg",
+      "assets/dining1.jpg",
       "assets/bedroom1.jpg",
+      "assets/sbedroom1.jpg",
       "assets/bathroom1.jpg",
       "assets/balcony1.jpg",
       "assets/fireplace2.jpg"
     ]
   },
+
   {
-    "id": "diani",
+    "id": "diani-house",
     "title": "Beachfront Villa - Diani",
     "shortTitle": "Beachfront Villa",
     "price": 42000000,
     "formattedPrice": "KES 42,000,000",
     "location": "Diani",
-    "type": "Apartment",
+    "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
     "hero": "assets/dianihouse.jpg",
     "thumbnail": "assets/dianihouse.jpg",
-    "description": "Beautiful beachfront villa located in Diani. Perfect for luxury living, holiday rentals and long-term investment.",
+    "description": "Luxury beachfront villa with ocean views, swimming pool and premium finishes.",
     "features": [
-      "Beach Access",
-      "Swimming Pool",
       "5 Bedrooms",
+      "Swimming Pool",
+      "Beach Access",
       "Large Garden",
       "Ocean View",
       "Staff Quarters"
@@ -53,33 +56,34 @@
     "gallery": [
       "assets/living2.jpg",
       "assets/kitchen2.jpg",
+      "assets/dining2.jpg",
       "assets/bedroom2.jpg",
+      "assets/sbedroom2.jpg",
       "assets/bathroom2.jpg",
       "assets/balcony2.jpg",
-      "assets/dining2.jpg"
+      "assets/fireplace3.jpg"
     ]
   },
+
   {
-    "id": "nairobihouse",
-    "title": "Luxury Family Home - Nairobi",
-    "shortTitle": "Luxury Home",
+    "id": "nairobi-house",
+    "title": "Executive Residence - Nairobi",
+    "shortTitle": "Executive Residence",
     "price": 35000000,
     "formattedPrice": "KES 35,000,000",
     "location": "Nairobi",
-    "type": "Apartment",
+    "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
     "hero": "assets/nairobihouse.jpg",
     "thumbnail": "assets/nairobihouse.jpg",
-    "description": "Elegant luxury residence located in Nairobi featuring spacious living spaces, modern interiors, premium finishes, multiple entertainment areas and excellent access to key amenities.",
+    "description": "Elegant city residence with luxury finishes and spacious family living spaces.",
     "features": [
-      "5 Spacious Bedrooms",
-      "4 Modern Bathrooms",
+      "5 Bedrooms",
+      "4 Bathrooms",
       "Luxury Kitchen",
-      "Dining Area",
-      "Private Balcony",
-      "Fireplace Lounge",
-      "Secure Compound",
+      "Dining Room",
+      "Fireplace",
       "Ample Parking"
     ],
     "gallery": [
@@ -90,11 +94,111 @@
       "assets/sbedroom3.jpg",
       "assets/bathroom3.jpg",
       "assets/balcony3.jpg",
-      "assets/fireplace3.jpg"
+      "assets/fireplace4.jpg"
     ]
   },
+
   {
-    "id": "matuu",
+    "id": "ruiru-house",
+    "title": "Modern Family Home - Ruiru",
+    "shortTitle": "Modern Home",
+    "price": 16000000,
+    "formattedPrice": "KES 16,000,000",
+    "location": "Ruiru",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 4,
+    "hero": "assets/ruiruhouse.jpeg",
+    "thumbnail": "assets/ruiruhouse.jpeg",
+    "description": "Stylish modern home located in a rapidly growing residential area.",
+    "features": [
+      "4 Bedrooms",
+      "3 Bathrooms",
+      "Modern Kitchen",
+      "Balcony",
+      "Parking",
+      "Perimeter Wall"
+    ],
+    "gallery": [
+      "assets/living4.jpeg",
+      "assets/kitchen4.jpg",
+      "assets/dining4.jpg",
+      "assets/bedroom4.jpg",
+      "assets/sbedroom4.jpg",
+      "assets/bathroom4.jpg",
+      "assets/balcony4.jpg",
+      "assets/fireplace5.jpg"
+    ]
+  },
+
+  {
+    "id": "runda-house",
+    "title": "Luxury Mansion - Runda",
+    "shortTitle": "Luxury Mansion",
+    "price": 65000000,
+    "formattedPrice": "KES 65,000,000",
+    "location": "Runda",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 6,
+    "hero": "assets/rundahouse.jpeg",
+    "thumbnail": "assets/rundahouse.jpeg",
+    "description": "Exclusive luxury mansion located in one of Nairobi's most prestigious neighborhoods.",
+    "features": [
+      "6 Bedrooms",
+      "Home Office",
+      "Large Garden",
+      "Luxury Finishes",
+      "Entertainment Area",
+      "High Security"
+    ],
+    "gallery": [
+      "assets/living5.jpg",
+      "assets/kitchen5.jpg",
+      "assets/dining5.jpg",
+      "assets/bedroom5.jpg",
+      "assets/sbedroom5.jpg",
+      "assets/bathroom5.jpg",
+      "assets/balcony5.jpg",
+      "assets/fireplace6.jpg"
+    ]
+  },
+
+  {
+    "id": "lavington-house",
+    "title": "Elegant Townhouse - Lavington",
+    "shortTitle": "Townhouse",
+    "price": 45000000,
+    "formattedPrice": "KES 45,000,000",
+    "location": "Lavington",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 5,
+    "hero": "assets/lavingtonhouse.jpg",
+    "thumbnail": "assets/lavingtonhouse.jpg",
+    "description": "Contemporary townhouse in Lavington featuring spacious interiors and premium amenities.",
+    "features": [
+      "5 Bedrooms",
+      "4 Bathrooms",
+      "Modern Kitchen",
+      "Family Room",
+      "Balcony",
+      "DSQ"
+    ],
+    "gallery": [
+      "assets/living6.jpg",
+      "assets/kitchen6.jpg",
+      "assets/dining6.jpg",
+      "assets/bedroom6.jpg",
+      "assets/sbedroom6.jpg",
+      "assets/bathroom6.jpg",
+      "assets/balcony6.jpg",
+      "assets/fireplace6.jpg"
+    ]
+  },
+
+  {
+    "id": "matuu-land",
     "title": "Prime Land - Matuu",
     "shortTitle": "Prime Land",
     "price": 2500000,
@@ -105,14 +209,12 @@
     "size": "1 Acre",
     "hero": "assets/matuuland.jpeg",
     "thumbnail": "assets/matuuland.jpeg",
-    "description": "Prime land suitable for residential or commercial development. Located near major roads and growing infrastructure.",
+    "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "1 Acre",
       "Ready Title",
       "Road Access",
-      "Electricity Nearby",
-      "Water Available",
-      "Fast Growing Area"
+      "Water Available"
     ],
     "gallery": [
       "assets/matuuland.jpeg",
@@ -120,10 +222,11 @@
       "assets/matuuad2.jpg"
     ]
   },
+
   {
-    "id": "dianiland",
+    "id": "diani-land",
     "title": "Prime Beachside Land - Diani",
-    "shortTitle": "Prime Beachside Land",
+    "shortTitle": "Beachside Land",
     "price": 8500000,
     "formattedPrice": "KES 8,500,000",
     "location": "Diani",
@@ -132,17 +235,150 @@
     "size": "1/2 Acre",
     "hero": "assets/dianiland.jpeg",
     "thumbnail": "assets/dianiland.jpeg",
-    "description": "Prime parcel of land located in Diani, suitable for residential development, holiday villas, apartments, or investment projects.",
-    "features": [
-      "1/2 Acre",
-      "Ready Title Deed",
-      "Road Access",
-      "Electricity Available",
-      "Water Available",
-      "Investment Opportunity"
-    ],
     "gallery": [
       "assets/dianiland.jpeg"
+    ]
+  },
+
+  {
+    "id": "kenol-land",
+    "title": "Commercial Land - Kenol",
+    "shortTitle": "Commercial Land",
+    "price": 4800000,
+    "formattedPrice": "KES 4,800,000",
+    "location": "Kenol",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "hero": "assets/kenolland.jpg",
+    "thumbnail": "assets/kenolland.jpg",
+    "gallery": [
+      "assets/kenolland.jpg",
+      "assets/kenolad.jpg"
+    ]
+  },
+
+  {
+    "id": "machakos-land",
+    "title": "Investment Land - Machakos",
+    "shortTitle": "Investment Land",
+    "price": 3200000,
+    "formattedPrice": "KES 3,200,000",
+    "location": "Machakos",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "hero": "assets/machakosland.jpg",
+    "thumbnail": "assets/machakosland.jpg",
+    "gallery": [
+      "assets/machakosland.jpg",
+      "assets/machakoslandimage2.jpg",
+      "assets/machakoslandimage3.jpg"
+    ]
+  },
+
+  {
+    "id": "nyeri-land",
+    "title": "Agricultural Land - Nyeri",
+    "shortTitle": "Agricultural Land",
+    "price": 2900000,
+    "formattedPrice": "KES 2,900,000",
+    "location": "Nyeri",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "hero": "assets/nyeriland.jpeg",
+    "thumbnail": "assets/nyeriland.jpeg",
+    "gallery": [
+      "assets/nyeriland.jpeg",
+      "assets/nyerilandimage2.jpg",
+      "assets/nyerilandimage3.jpg"
+    ]
+  },
+
+  {
+    "id": "laikipia-land",
+    "title": "Prime Investment Land - Laikipia",
+    "shortTitle": "Investment Land",
+    "price": 3900000,
+    "formattedPrice": "KES 3,900,000",
+    "location": "Laikipia",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "2 Acres",
+    "hero": "assets/laikipialand.png",
+    "thumbnail": "assets/laikipialand.png",
+    "gallery": [
+      "assets/laikipialand.png",
+      "assets/laikipialandimage2.jpg"
+    ]
+  },
+
+  {
+    "id": "kenol-warehouse",
+    "title": "Industrial Warehouse - Kenol",
+    "shortTitle": "Warehouse",
+    "price": 25000000,
+    "formattedPrice": "KES 25,000,000",
+    "location": "Kenol",
+    "type": "Warehouse",
+    "deal": "Sale",
+    "hero": "assets/kenolwarehouse.jpg",
+    "thumbnail": "assets/kenolwarehouse.jpg",
+    "gallery": [
+      "assets/kenolwarehouse.jpg",
+      "assets/differentkenolwarehouse.jpg"
+    ]
+  },
+
+  {
+    "id": "embakasi-warehouse",
+    "title": "Logistics Warehouse - Embakasi",
+    "shortTitle": "Warehouse",
+    "price": 58000000,
+    "formattedPrice": "KES 58,000,000",
+    "location": "Embakasi",
+    "type": "Warehouse",
+    "deal": "Sale",
+    "hero": "assets/embakasiwarehouse.jpg",
+    "thumbnail": "assets/embakasiwarehouse.jpg",
+    "gallery": [
+      "assets/embakasiwarehouse.jpg",
+      "assets/embakasiwarehouseimage2.jpg",
+      "assets/embakasiwarehouseimage3.jpg"
+    ]
+  },
+
+  {
+    "id": "ruiru-warehouse",
+    "title": "Commercial Warehouse - Ruiru",
+    "shortTitle": "Warehouse",
+    "price": 35000000,
+    "formattedPrice": "KES 35,000,000",
+    "location": "Ruiru",
+    "type": "Warehouse",
+    "deal": "Sale",
+    "hero": "assets/ruiruwarehouse.jpg",
+    "thumbnail": "assets/ruiruwarehouse.jpg",
+    "gallery": [
+      "assets/ruiruwarehouse.jpg",
+      "assets/ruiruwarehouseimage2.jpg"
+    ]
+  },
+
+  {
+    "id": "lavington-warehouse",
+    "title": "Storage Facility - Lavington",
+    "shortTitle": "Warehouse",
+    "price": 47000000,
+    "formattedPrice": "KES 47,000,000",
+    "location": "Lavington",
+    "type": "Warehouse",
+    "deal": "Sale",
+    "hero": "assets/lavington warehouse.jpg",
+    "thumbnail": "assets/lavington warehouse.jpg",
+    "gallery": [
+      "assets/lavington warehouse.jpg"
     ]
   }
 ]
