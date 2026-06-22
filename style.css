@@ -729,7 +729,7 @@ section{
         flex:1 1 0;
         min-width:0;
         padding:6px 6px;
-        font-size:.7rem;
+        font-size:.8rem;
         border-right:1px solid #eee;
     }
 
@@ -767,13 +767,13 @@ section{
 }
 
 .property-info h3{
-    font-size:.8rem;
+    font-size:.9rem;
     line-height:1.2;
     margin-bottom:4px;
 }
 
 .property-info p{
-    font-size:.7rem;
+    font-size:.8rem;
     margin-bottom:4px;
 }
 
