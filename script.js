@@ -1,5 +1,6 @@
 let properties = [];
 let updateViewMore = null;
+let filterActive = false;
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -11,7 +12,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupHeroSearch();
     setupPropertySearch();
     setupViewMore();
-
+     
+    restoreFilters();
     restoreSelectedProperty();
 
 });
@@ -203,6 +205,8 @@ searchBtn.addEventListener("click", () => {
     const priceRange =
         document.getElementById("priceRange").value;
 
+    filterActive = true;
+
     let found = false;
 
     document
@@ -361,8 +365,23 @@ searchBtn.addEventListener("click", () => {
 
     toggleNoResults(found);
 
-    searchBtn.style.display = "none";
-    clearBtn.style.display = "";
+sessionStorage.setItem(
+    "propertyFilters",
+    JSON.stringify({
+        type,
+        location,
+        deal,
+        bedrooms,
+        size
+    })
+);
+
+if (typeof updateViewMore === "function") {
+    updateViewMore();
+}
+
+searchBtn.style.display = "none";
+clearBtn.style.display = "";
 
 });
 
@@ -378,10 +397,20 @@ clearBtn.addEventListener("click", () => {
 
     resetCards();
 
-    toggleNoResults(true);
+toggleNoResults(true);
 
-    searchBtn.style.display = "";
-    clearBtn.style.display = "none";
+filterActive = false;
+
+sessionStorage.removeItem(
+    "propertyFilters"
+);
+
+if (typeof updateViewMore === "function") {
+    updateViewMore();
+}
+
+searchBtn.style.display = "";
+clearBtn.style.display = "none";
 
 });
 
@@ -508,10 +537,20 @@ function setupViewMore() {
 
         });
 
-        btn.style.display =
-            cards.length > limit()
-                ? "block"
-                : "none";
+        if (filterActive) {
+
+    cards.forEach(card => {
+        card.classList.remove("hidden");
+    });
+
+    btn.style.display = "none";
+    return;
+}
+
+btn.style.display =
+    cards.length > limit()
+        ? "block"
+        : "none";
 
         btn.textContent =
             expanded
@@ -561,6 +600,42 @@ const navMenu = document.getElementById("navMenu");
 menuToggle?.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+
+function restoreFilters() {
+
+    const saved =
+        sessionStorage.getItem("propertyFilters");
+
+    if (!saved) return;
+
+    const filters = JSON.parse(saved);
+
+    document.getElementById(
+        "propertyTypeFilter"
+    ).value = filters.type || "";
+
+    document.getElementById(
+        "propertyLocationFilter"
+    ).value = filters.location || "";
+
+    document.getElementById(
+        "propertyDealFilter"
+    ).value = filters.deal || "";
+
+    document.getElementById(
+        "propertyBedroomsFilter"
+    ).value = filters.bedrooms || "";
+
+    document.getElementById(
+        "propertySizeFilter"
+    ).value = filters.size || "";
+
+    filterActive = true;
+
+    document
+        .getElementById("propertySearchBtn")
+        .click();
+}
 
 function restoreSelectedProperty() {
 
