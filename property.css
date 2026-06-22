@@ -681,14 +681,6 @@ body {
         padding: 10px 12px;
     }
 
-    .lightbox-arrow {
-        width: 45px;
-        height: 45px;
-    }
-
-    .lightbox-counter {
-        font-size: 0.75rem;
-    }
 }
 
 
@@ -792,5 +784,104 @@ body {
     .info-card h3,
     .agent-card h3{
         margin-bottom:15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .lightbox {
+        backdrop-filter: blur(18px);
+        background: rgba(0, 0, 0, 0.98);
+    }
+
+    .lightbox-track {
+        padding: 0;
+    }
+
+    .lightbox-track img {
+        max-width: 92vw;
+        max-height: 78vh;
+        border-radius: 16px;
+
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        touch-action: manipulation;
+    }
+
+    .lightbox-track img.active {
+        transform: scale(1);
+    }
+
+    .lightbox-track img:hover {
+        transform: none;
+    }
+
+    .close-lightbox {
+        top: calc(env(safe-area-inset-top, 0px) + 14px);
+        right: 14px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 1.4rem;
+
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+    }
+
+    .lightbox-arrow {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+
+        top: auto;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+        transform: none;
+    }
+
+    .lightbox-prev {
+        left: 20px;
+    }
+
+    .lightbox-next {
+        right: 20px;
+    }
+
+    .lightbox-counter {
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 22px);
+
+        font-size: 0.75rem;
+        padding: 6px 12px;
+
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+
+        letter-spacing: 0.5px;
+    }
+
+    .lightbox-track img.zoomed {
+        transform: scale(1.4);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .lightbox-track img {
+        max-width: 94vw;
+        max-height: 72vh;
+        border-radius: 14px;
+    }
+
+    .lightbox-arrow {
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .close-lightbox {
+        width: 44px;
+        height: 44px;
     }
 }
