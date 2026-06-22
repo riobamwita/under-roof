@@ -720,7 +720,7 @@ section{
     gap:4px;
     padding:6px 8px;
     border-radius:50px;
-    overflow-x:auto;
+    overflow-x:none;
     justify-content:flex-start;
 }
 
