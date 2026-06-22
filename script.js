@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupSlideshow();
 
     await loadProperties();
+    
+    setupDynamicPropertyFilters();
 
     setupHeroSearch();
     setupPropertySearch();
@@ -647,6 +649,22 @@ function restoreFilters() {
         "propertySizeFilter"
     ).value = filters.size || "";
 
+    const bedroomsWrapper =
+    document.getElementById("bedroomsWrapper");
+
+const sizeWrapper =
+    document.getElementById("sizeWrapper");
+
+bedroomsWrapper.style.display =
+    filters.type === "House"
+        ? ""
+        : "none";
+
+sizeWrapper.style.display =
+    filters.type === "Land"
+        ? ""
+        : "none";
+
     filterActive = true;
 
     let found = false;
@@ -681,4 +699,49 @@ function restoreSelectedProperty() {
 
     }, 300);
 
+}
+
+function setupDynamicPropertyFilters() {
+
+    const typeFilter =
+        document.getElementById("propertyTypeFilter");
+
+    const bedroomsWrapper =
+        document.getElementById("bedroomsWrapper");
+
+    const sizeWrapper =
+        document.getElementById("sizeWrapper");
+
+    if (!typeFilter) return;
+
+    function updateFilters() {
+
+    const type = typeFilter.value;
+
+    bedroomsWrapper.style.display = "none";
+    sizeWrapper.style.display = "none";
+
+    document.getElementById(
+        "propertyBedroomsFilter"
+    ).value = "";
+
+    document.getElementById(
+        "propertySizeFilter"
+    ).value = "";
+
+    if (type === "House") {
+        bedroomsWrapper.style.display = "";
+    }
+
+    if (type === "Land") {
+        sizeWrapper.style.display = "";
+    }
+}
+
+    typeFilter.addEventListener(
+        "change",
+        updateFilters
+    );
+
+    updateFilters();
 }
