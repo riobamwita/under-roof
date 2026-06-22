@@ -756,21 +756,21 @@ section{
 }
 
 .property-info{
-    padding:12px;
+    padding:8px;
 }
 
 .property-info h3{
-    font-size:.95rem;
+    font-size:.85rem;
     margin-bottom:5px;
 }
 
 .property-info p{
-    font-size:.8rem;
+    font-size:.75rem;
     margin-bottom:6px;
 }
 
 .property-info span{
-    font-size:.85rem;
+    font-size:.8rem;
 }
 
     .contact-modern{
