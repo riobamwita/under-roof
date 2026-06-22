@@ -640,6 +640,10 @@ section{
 
 @media (max-width:768px){
 
+    .hero-content{
+    transform:translateX(-50px);
+    }
+    
     .menu-toggle{
         display:block;
         color:#fff;
