@@ -598,8 +598,28 @@ const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 menuToggle?.addEventListener("click", () => {
+
     navMenu.classList.toggle("active");
+
+    menuToggle.textContent =
+        navMenu.classList.contains("active")
+            ? "✕"
+            : "☰";
+
 });
+
+document
+    .querySelectorAll("#navMenu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("active");
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
 
 function restoreFilters() {
 
@@ -631,6 +651,8 @@ function restoreFilters() {
     ).value = filters.size || "";
 
     filterActive = true;
+
+    let found = false;
 
     document
         .getElementById("propertySearchBtn")
