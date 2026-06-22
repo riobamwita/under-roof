@@ -712,37 +712,44 @@ section{
         background:#222;
     }
 
-    .property-search{
+   .property-search{
     width:95%;
     margin:0 auto 30px;
+
     display:flex;
     align-items:center;
+    justify-content:center;
+
     gap:4px;
     padding:6px 8px;
+
     border-radius:50px;
-    overflow-x:none;
-    justify-content:flex-start;
+    overflow:hidden;
 }
 
 .property-search select{
     flex:0 0 auto;
     width:auto;
-    min-width:max-content;
+    min-width:auto;
+
     padding:6px 8px;
     font-size:.8rem;
+
     border-right:1px solid #eee;
+}
+
+.property-search select:last-of-type{
+    border-right:none;
 }
 
 .property-search button{
     flex:0 0 auto;
+
     padding:6px 10px;
     font-size:.7rem;
+
     white-space:nowrap;
 }
-
-    .property-search select:last-of-type{
-        border-right:none;
-    }
 
     .property-grid{
         grid-template-columns:repeat(2,1fr);
