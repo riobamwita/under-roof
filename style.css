@@ -712,6 +712,39 @@ section{
         background:#222;
     }
 
+    .offers-header{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+    }
+
+    .offers-header h2{
+        font-size:1.3rem;
+        margin-bottom:2px;
+    }
+
+    .offers-header p{
+        font-size:.8rem;
+    }
+
+    .offers-toggle{
+        padding:8px 14px;
+        font-size:.8rem;
+        flex-shrink:0;
+    }
+
+    .section-head{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-head h2{
+    font-size:1.5rem;
+    margin-bottom:2px;
+}
+
    .property-search{
     width:95%;
     margin:0 auto 30px;
