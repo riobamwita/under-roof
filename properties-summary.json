@@ -1,0 +1,174 @@
+[
+  {
+    "id": "kenol",
+    "shortTitle": "4 Bedroom House",
+    "price": 185000,
+    "formattedPrice": "KES 185,000/ Month",
+    "location": "Kenol",
+    "type": "House",
+    "deal": "Rent",
+    "bedrooms": 4,
+    "thumbnail": "assets/kenolhouse.jpg"
+  },
+  {
+    "id": "diani-house",
+    "shortTitle": "5 Bedroom Villa",
+    "price": 42000000,
+    "formattedPrice": "KES 42,000,000",
+    "location": "Diani",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 5,
+    "thumbnail": "assets/dianihouse.jpg"
+  },
+  {
+    "id": "nairobi-house",
+    "shortTitle": "5 Bedroom House",
+    "price": 135000,
+    "formattedPrice": "KES 135,000/ Month",
+    "location": "Buruburu",
+    "type": "House",
+    "deal": "Rent",
+    "bedrooms": 5,
+    "thumbnail": "assets/nairobihouse.jpg"
+  },
+  {
+    "id": "ruiru-house",
+    "shortTitle": "4 Bedroom Mansion",
+    "price": 16000000,
+    "formattedPrice": "KES 16,000,000",
+    "location": "Ruiru",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 4,
+    "thumbnail": "assets/ruiruhouse.jpeg"
+  },
+  {
+    "id": "runda-house",
+    "shortTitle": "6 Bedroom Mansion",
+    "price": 65000000,
+    "formattedPrice": "KES 65,000,000",
+    "location": "Runda",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 6,
+    "thumbnail": "assets/rundahouse.jpeg"
+  },
+  {
+    "id": "lavington-house",
+    "shortTitle": "5 Bedroom House",
+    "price": 45000000,
+    "formattedPrice": "KES 45,000,000",
+    "location": "Lavington",
+    "type": "House",
+    "deal": "Sale",
+    "bedrooms": 5,
+    "thumbnail": "assets/lavingtonhouse.jpg"
+  },
+  {
+    "id": "matuu-land",
+    "shortTitle": "Land 1 Acre",
+    "price": 500000,
+    "formattedPrice": "KES 500,000",
+    "location": "Matuu",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "thumbnail": "assets/matuuland.jpeg"
+  },
+  {
+    "id": "diani-land",
+    "shortTitle": "Land 1/2 Acre",
+    "price": 850000,
+    "formattedPrice": "KES 850,000",
+    "location": "Diani",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1/2 Acre",
+    "thumbnail": "assets/dianiland.jpeg"
+  },
+  {
+    "id": "kenol-land",
+    "shortTitle": "Land 1 Acre",
+    "price": 480000,
+    "formattedPrice": "KES 480,000",
+    "location": "Kenol",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "thumbnail": "assets/kenolland.jpg"
+  },
+  {
+    "id": "machakos-land",
+    "shortTitle": "Land 1 Acre",
+    "price": 320000,
+    "formattedPrice": "KES 320,000",
+    "location": "Machakos",
+    "type": "Land",
+    "deal": "Sale",
+    "size": "1 Acre",
+    "thumbnail": "assets/machakosland.jpg"
+  },
+  {
+    "id": "nyeri-land",
+    "shortTitle": "Land 1 Acre",
+    "price": 90000,
+    "formattedPrice": "KES 90,000/ Yr",
+    "location": "Nyeri",
+    "type": "Land",
+    "deal": "Rent",
+    "size": "1 Acre",
+    "thumbnail": "assets/nyeriland.jpeg"
+  },
+  {
+    "id": "laikipia-land",
+    "shortTitle": "Land 2 Acres",
+    "price": 41000,
+    "formattedPrice": "KES 41,000/ Yr",
+    "location": "Laikipia",
+    "type": "Land",
+    "deal": "Rent",
+    "size": "2 Acres",
+    "thumbnail": "assets/laikipialand.png"
+  },
+  {
+    "id": "kenol-warehouse",
+    "shortTitle": "Warehouse",
+    "price": 25000,
+    "formattedPrice": "KES 25,000/ Month",
+    "location": "Kenol",
+    "type": "Warehouse",
+    "deal": "Rent",
+    "thumbnail": "assets/kenolwarehouse.jpg"
+  },
+  {
+    "id": "embakasi-warehouse",
+    "shortTitle": "Warehouse",
+    "price": 58000,
+    "formattedPrice": "KES 58,000/ Month",
+    "location": "Embakasi",
+    "type": "Warehouse",
+    "deal": "Rent",
+    "thumbnail": "assets/embakasiwarehouse.jpg"
+  },
+  {
+    "id": "ruiru-warehouse",
+    "shortTitle": "Warehouse",
+    "price": 3500000,
+    "formattedPrice": "KES 3,500,000",
+    "location": "Ruiru",
+    "type": "Warehouse",
+    "deal": "Sale",
+    "thumbnail": "assets/ruiruwarehouse.jpg"
+  },
+  {
+    "id": "lavington-warehouse",
+    "shortTitle": "Warehouse",
+    "price": 47000,
+    "formattedPrice": "KES 47,000/ Month",
+    "location": "Lavington",
+    "type": "Warehouse",
+    "deal": "Rent",
+    "thumbnail": "assets/lavington warehouse.jpg"
+  }
+]

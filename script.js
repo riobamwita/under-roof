@@ -23,7 +23,7 @@ async function loadProperties() {
 
 try {
 
-    const response = await fetch("properties.json");
+    const response = await fetch("properties-summary.json");
     properties = await response.json();
 
     populatePropertyFilters();
