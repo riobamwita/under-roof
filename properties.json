@@ -9,8 +9,8 @@
     "type": "House",
     "deal": "Rent",
     "bedrooms": 4,
-    "hero": "assets/kenolhouse.jpg",
-    "thumbnail": "assets/kenolhouse.jpg",
+    "hero": "assets/kenolwarehouse.webp",
+    "thumbnail": "assets/kenolhouse.webp",
     "description": "Modern family home located in Kenol featuring spacious living areas, premium finishes and excellent road access.",
     "features": [
       "4 Bedrooms",
@@ -21,14 +21,14 @@
       "Secure Compound"
     ],
     "gallery": [
-      "assets/living1.jpg",
-      "assets/kitchen1.jpg",
-      "assets/dining1.jpg",
-      "assets/bedroom1.jpg",
-      "assets/sbedroom1.jpg",
-      "assets/bathroom1.jpg",
-      "assets/balcony1.jpg",
-      "assets/fireplace2.jpg"
+      "assets/living1.webp",
+      "assets/kitchen1.webp",
+      "assets/dining1.webp",
+      "assets/bedroom1.webp",
+      "assets/sbedroom1.webp",
+      "assets/bathroom1.webp",
+      "assets/balcony1.webp",
+      "assets/fireplace2.webp"
     ]
   },
 
@@ -42,8 +42,8 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
-    "hero": "assets/dianihouse.jpg",
-    "thumbnail": "assets/dianihouse.jpg",
+    "hero": "assets/dianihouse.webp",
+    "thumbnail": "assets/dianihouse.webp",
     "description": "Luxury beachfront villa with ocean views, swimming pool and premium finishes.",
     "features": [
       "5 Bedrooms",
@@ -54,14 +54,14 @@
       "Staff Quarters"
     ],
     "gallery": [
-      "assets/living2.jpg",
-      "assets/kitchen2.jpg",
-      "assets/dining2.jpg",
-      "assets/bedroom2.jpg",
-      "assets/sbedroom2.jpg",
-      "assets/bathroom2.jpg",
-      "assets/balcony2.jpg",
-      "assets/fireplace3.jpg"
+      "assets/living2.webp",
+      "assets/kitchen2.webp",
+      "assets/dining2.webp",
+      "assets/bedroom2.webp",
+      "assets/sbedroom2.webp",
+      "assets/bathroom2.webp",
+      "assets/balcony2.webp",
+      "assets/fireplace3.webp"
     ]
   },
 
@@ -75,8 +75,8 @@
     "type": "House",
     "deal": "Rent",
     "bedrooms": 5,
-    "hero": "assets/nairobihouse.jpg",
-    "thumbnail": "assets/nairobihouse.jpg",
+    "hero": "assets/nairobihouse.webp",
+    "thumbnail": "assets/nairobihouse.webp",
     "description": "Elegant city residence with luxury finishes and spacious family living spaces.",
     "features": [
       "5 Bedrooms",
@@ -87,14 +87,14 @@
       "Ample Parking"
     ],
     "gallery": [
-      "assets/living3.jpg",
-      "assets/kitchen3.jpg",
-      "assets/dining3.jpg",
-      "assets/bedroom3.jpg",
-      "assets/sbedroom3.jpg",
-      "assets/bathroom3.jpg",
-      "assets/balcony3.jpg",
-      "assets/fireplace4.jpg"
+      "assets/living3.webp",
+      "assets/kitchen3.webp",
+      "assets/dining3.webp",
+      "assets/bedroom3.webp",
+      "assets/sbedroom3.webp",
+      "assets/bathroom3.webp",
+      "assets/balcony3.webp",
+      "assets/fireplace4.webp"
     ]
   },
 
@@ -108,8 +108,8 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 4,
-    "hero": "assets/ruiruhouse.jpeg",
-    "thumbnail": "assets/ruiruhouse.jpeg",
+    "hero": "assets/ruiruhouse.webp",
+    "thumbnail": "assets/ruiruhouse.webp",
     "description": "Stylish modern home located in a rapidly growing residential area.",
     "features": [
       "4 Bedrooms",
@@ -120,14 +120,14 @@
       "Perimeter Wall"
     ],
     "gallery": [
-      "assets/living4.jpeg",
-      "assets/kitchen4.jpg",
-      "assets/dining4.jpg",
-      "assets/bedroom4.jpg",
-      "assets/sbedroom4.jpg",
-      "assets/bathroom4.jpg",
-      "assets/balcony4.jpg",
-      "assets/fireplace5.jpg"
+      "assets/living4.webp",
+      "assets/kitchen4.webp",
+      "assets/dining4.webp",
+      "assets/bedroom4.webp",
+      "assets/sbedroom4.webp",
+      "assets/bathroom4.webp",
+      "assets/balcony4.webp",
+      "assets/fireplace5.webp"
     ]
   },
 
@@ -141,8 +141,8 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 6,
-    "hero": "assets/rundahouse.jpeg",
-    "thumbnail": "assets/rundahouse.jpeg",
+    "hero": "assets/rundahouse.webp",
+    "thumbnail": "assets/rundahouse.webp",
     "description": "Exclusive luxury mansion located in one of Nairobi's most prestigious neighborhoods.",
     "features": [
       "6 Bedrooms",
@@ -153,14 +153,14 @@
       "High Security"
     ],
     "gallery": [
-      "assets/living5.jpg",
-      "assets/kitchen5.jpg",
-      "assets/dining5.jpg",
-      "assets/bedroom5.jpg",
-      "assets/sbedroom5.jpg",
-      "assets/bathroom5.jpg",
-      "assets/balcony5.jpg",
-      "assets/fireplace6.jpg"
+      "assets/living5.webp",
+      "assets/kitchen5.webp",
+      "assets/dining5.webp",
+      "assets/bedroom5.webp",
+      "assets/sbedroom5.webp",
+      "assets/bathroom5.webp",
+      "assets/balcony5.webp",
+      "assets/fireplace6.webp"
     ]
   },
 
@@ -174,8 +174,8 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
-    "hero": "assets/lavingtonhouse.jpg",
-    "thumbnail": "assets/lavingtonhouse.jpg",
+    "hero": "assets/lavingtonhouse.webp",
+    "thumbnail": "assets/lavingtonhouse.webp",
     "description": "Contemporary townhouse in Lavington featuring spacious interiors and premium amenities.",
     "features": [
       "5 Bedrooms",
@@ -186,14 +186,14 @@
       "DSQ"
     ],
     "gallery": [
-      "assets/living6.jpg",
-      "assets/kitchen6.jpg",
-      "assets/dining6.jpg",
-      "assets/bedroom6.jpg",
-      "assets/sbedroom6.jpg",
-      "assets/bathroom6.jpg",
-      "assets/balcony6.jpg",
-      "assets/fireplace6.jpg"
+      "assets/living6.webp",
+      "assets/kitchen6.webp",
+      "assets/dining6.webp",
+      "assets/bedroom6.webp",
+      "assets/sbedroom6.webp",
+      "assets/bathroom6.webp",
+      "assets/balcony6.webp",
+      "assets/fireplace6.webp"
     ]
   },
 
@@ -207,8 +207,8 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "hero": "assets/matuuland.jpeg",
-    "thumbnail": "assets/matuuland.jpeg",
+    "hero": "assets/matuuland.webp",
+    "thumbnail": "assets/matuuland.webp",
     "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "1 Acre",
@@ -217,9 +217,9 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/matuuland.jpeg",
-      "assets/matuuad.jpg",
-      "assets/matuuad2.jpg"
+      "assets/matuuland.webp",
+      "assets/matuuad.webp",
+      "assets/matuuad2.webp"
     ]
   },
 
@@ -233,8 +233,8 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1/2 Acre",
-    "hero": "assets/dianiland.jpeg",
-    "thumbnail": "assets/dianiland.jpeg",
+    "hero": "assets/dianiland.webp",
+    "thumbnail": "assets/dianiland.webp",
     "description": "Prime beachside land suitable for residential and commercial development.",
     "features": [
       "1/2 Acre",
@@ -243,7 +243,7 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/dianiland.jpeg"
+      "assets/dianiland.webp"
     ]
   },
 
@@ -257,8 +257,8 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "hero": "assets/kenolland.jpg",
-    "thumbnail": "assets/kenolland.jpg",
+    "hero": "assets/kenolland.webp",
+    "thumbnail": "assets/kenolland.webp",
     "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "1 Acre",
@@ -267,8 +267,8 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/kenolland.jpg",
-      "assets/kenolad.jpg"
+      "assets/kenolland.webp",
+      "assets/kenolad.webp"
     ]
   },
 
@@ -282,8 +282,8 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "hero": "assets/machakosland.jpg",
-    "thumbnail": "assets/machakosland.jpg",
+    "hero": "assets/machakosland.webp",
+    "thumbnail": "assets/machakosland.webp",
     "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "1 Acre",
@@ -292,9 +292,9 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/machakosland.jpg",
-      "assets/machakoslandimage2.jpg",
-      "assets/machakoslandimage3.jpg"
+      "assets/machakosland.webp",
+      "assets/machakoslandimage2.webp",
+      "assets/machakoslandimage3.webp"
     ]
   },
 
@@ -308,8 +308,8 @@
     "type": "Land",
     "deal": "Rent",
     "size": "1 Acre",
-    "hero": "assets/nyeriland.jpeg",
-    "thumbnail": "assets/nyeriland.jpeg",
+    "hero": "assets/nyeriland.webp",
+    "thumbnail": "assets/nyeriland.webp",
     "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "1 Acre",
@@ -318,9 +318,9 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/nyeriland.jpeg",
-      "assets/nyerilandimage2.jpg",
-      "assets/nyerilandimage3.jpg"
+      "assets/nyeriland.webp",
+      "assets/nyerilandimage2.webp",
+      "assets/nyerilandimage3.webp"
     ]
   },
 
@@ -334,8 +334,8 @@
     "type": "Land",
     "deal": "Rent",
     "size": "2 Acres",
-    "hero": "assets/laikipialand.png",
-    "thumbnail": "assets/laikipialand.png",
+    "hero": "assets/laikipialand.webp",
+    "thumbnail": "assets/laikipialand.webp",
     "description": "Prime land suitable for residential and commercial development.",
     "features": [
       "2 Acre",
@@ -344,8 +344,8 @@
       "Water Available"
     ],
     "gallery": [
-      "assets/laikipialand.png",
-      "assets/laikipialandimage2.jpg"
+      "assets/laikipialand.webp",
+      "assets/laikipialandimage2.webp"
     ]
   },
 
@@ -358,8 +358,8 @@
     "location": "Kenol",
     "type": "Warehouse",
     "deal": "Rent",
-    "hero": "assets/kenolwarehouse.jpg",
-    "thumbnail": "assets/kenolwarehouse.jpg",
+    "hero": "assets/kenolwarehouse.webp",
+    "thumbnail": "assets/kenolwarehouse.webp",
     "description": "Well-positioned warehouse suitable for storage, distribution and light industrial operations with convenient transport access.",
     "features": [
       "Spacious Storage Area",
@@ -368,8 +368,8 @@
       "Reliable Utilities"
     ],
     "gallery": [
-      "assets/kenolwarehouse.jpg",
-      "assets/differentkenolwarehouse.jpg"
+      "assets/kenolwarehouse.webp",
+      "assets/differentkenolwarehouse.webp"
     ]
   },
 
@@ -382,8 +382,8 @@
     "location": "Embakasi",
     "type": "Warehouse",
     "deal": "Rent",
-    "hero": "assets/embakasiwarehouse.jpg",
-    "thumbnail": "assets/embakasiwarehouse.jpg",
+    "hero": "assets/embakasiwarehouse.webp",
+    "thumbnail": "assets/embakasiwarehouse.webp",
     "description": "Modern warehouse facility located in a strategic commercial area, ideal for logistics, storage and business operations.",
     "features": [
       "High Ceiling Clearance",
@@ -392,9 +392,9 @@
       "Ample Parking"
     ],
     "gallery": [
-      "assets/embakasiwarehouse.jpg",
-      "assets/embakasiwarehouseimage2.jpg",
-      "assets/embakasiwarehouseimage3.jpg"
+      "assets/embakasiwarehouse.webp",
+      "assets/embakasiwarehouseimage2.webp",
+      "assets/embakasiwarehouseimage3.webp"
     ]
   },
 
@@ -407,8 +407,8 @@
     "location": "Ruiru",
     "type": "Warehouse",
     "deal": "Sale",
-    "hero": "assets/ruiruwarehouse.jpg",
-    "thumbnail": "assets/ruiruwarehouse.jpg",
+    "hero": "assets/ruiruwarehouse.webp",
+    "thumbnail": "assets/ruiruwarehouse.webp",
     "description": "Functional warehouse space with excellent accessibility, suitable for inventory management, storage and distribution needs.",
     "features": [
       "Large Floor Space",
@@ -417,8 +417,8 @@
       "Power and Water Connected"
     ],
     "gallery": [
-      "assets/ruiruwarehouse.jpg",
-      "assets/ruiruwarehouseimage2.jpg"
+      "assets/ruiruwarehouse.webp",
+      "assets/ruiruwarehouseimage2.webp"
     ]
   },
 
@@ -431,8 +431,8 @@
     "location": "Lavington",
     "type": "Warehouse",
     "deal": "Rent",
-    "hero": "assets/lavington warehouse.jpg",
-    "thumbnail": "assets/lavington warehouse.jpg",
+    "hero": "assets/lavingtonwarehouse.webp",
+    "thumbnail": "assets/lavingtonwarehouse.webp",
     "description": "Well-positioned warehouse suitable for storage, distribution and light industrial operations with convenient transport access.",
     "features": [
       "Spacious Storage Area",
@@ -441,7 +441,7 @@
       "Reliable Utilities"
     ],
     "gallery": [
-      "assets/lavington warehouse.jpg"
+      "assets/lavingtonwarehouse.webp"
     ]
   }
 ]

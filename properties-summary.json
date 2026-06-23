@@ -8,7 +8,7 @@
     "type": "House",
     "deal": "Rent",
     "bedrooms": 4,
-    "thumbnail": "assets/kenolhouse.jpg"
+    "thumbnail": "assets/kenolhouse.webp"
   },
   {
     "id": "diani-house",
@@ -19,7 +19,7 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
-    "thumbnail": "assets/dianihouse.jpg"
+    "thumbnail": "assets/dianihouse.webp"
   },
   {
     "id": "nairobi-house",
@@ -30,7 +30,7 @@
     "type": "House",
     "deal": "Rent",
     "bedrooms": 5,
-    "thumbnail": "assets/nairobihouse.jpg"
+    "thumbnail": "assets/nairobihouse.webp"
   },
   {
     "id": "ruiru-house",
@@ -41,7 +41,7 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 4,
-    "thumbnail": "assets/ruiruhouse.jpeg"
+    "thumbnail": "assets/ruiruhouse.webp"
   },
   {
     "id": "runda-house",
@@ -52,7 +52,7 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 6,
-    "thumbnail": "assets/rundahouse.jpeg"
+    "thumbnail": "assets/rundahouse.webp"
   },
   {
     "id": "lavington-house",
@@ -63,7 +63,7 @@
     "type": "House",
     "deal": "Sale",
     "bedrooms": 5,
-    "thumbnail": "assets/lavingtonhouse.jpg"
+    "thumbnail": "assets/lavingtonhouse.webp"
   },
   {
     "id": "matuu-land",
@@ -74,7 +74,7 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "thumbnail": "assets/matuuland.jpeg"
+    "thumbnail": "assets/matuuland.webp"
   },
   {
     "id": "diani-land",
@@ -85,7 +85,7 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1/2 Acre",
-    "thumbnail": "assets/dianiland.jpeg"
+    "thumbnail": "assets/dianiland.webp"
   },
   {
     "id": "kenol-land",
@@ -96,7 +96,7 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "thumbnail": "assets/kenolland.jpg"
+    "thumbnail": "assets/kenolland.webp"
   },
   {
     "id": "machakos-land",
@@ -107,7 +107,7 @@
     "type": "Land",
     "deal": "Sale",
     "size": "1 Acre",
-    "thumbnail": "assets/machakosland.jpg"
+    "thumbnail": "assets/machakosland.webp"
   },
   {
     "id": "nyeri-land",
@@ -118,7 +118,7 @@
     "type": "Land",
     "deal": "Rent",
     "size": "1 Acre",
-    "thumbnail": "assets/nyeriland.jpeg"
+    "thumbnail": "assets/nyeriland.webp"
   },
   {
     "id": "laikipia-land",
@@ -129,7 +129,7 @@
     "type": "Land",
     "deal": "Rent",
     "size": "2 Acres",
-    "thumbnail": "assets/laikipialand.png"
+    "thumbnail": "assets/laikipialand.webp"
   },
   {
     "id": "kenol-warehouse",
@@ -139,7 +139,7 @@
     "location": "Kenol",
     "type": "Warehouse",
     "deal": "Rent",
-    "thumbnail": "assets/kenolwarehouse.jpg"
+    "thumbnail": "assets/kenolwarehouse.webp"
   },
   {
     "id": "embakasi-warehouse",
@@ -149,7 +149,7 @@
     "location": "Embakasi",
     "type": "Warehouse",
     "deal": "Rent",
-    "thumbnail": "assets/embakasiwarehouse.jpg"
+    "thumbnail": "assets/embakasiwarehouse.webp"
   },
   {
     "id": "ruiru-warehouse",
@@ -159,7 +159,7 @@
     "location": "Ruiru",
     "type": "Warehouse",
     "deal": "Sale",
-    "thumbnail": "assets/ruiruwarehouse.jpg"
+    "thumbnail": "assets/ruiruwarehouse.webp"
   },
   {
     "id": "lavington-warehouse",
@@ -169,6 +169,6 @@
     "location": "Lavington",
     "type": "Warehouse",
     "deal": "Rent",
-    "thumbnail": "assets/lavington warehouse.jpg"
+    "thumbnail": "assets/lavington warehouse.webp"
   }
 ]
