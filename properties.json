@@ -361,12 +361,12 @@
     "hero": "assets/kenolwarehouse.jpg",
     "thumbnail": "assets/kenolwarehouse.jpg",
     "description": "Well-positioned warehouse suitable for storage, distribution and light industrial operations with convenient transport access.",
-"features": [
-  "Spacious Storage Area",
-  "Easy Truck Access",
-  "Secure Premises",
-  "Reliable Utilities"
-],
+    "features": [
+      "Spacious Storage Area",
+      "Easy Truck Access",
+      "Secure Premises",
+      "Reliable Utilities"
+    ],
     "gallery": [
       "assets/kenolwarehouse.jpg",
       "assets/differentkenolwarehouse.jpg"
@@ -385,12 +385,12 @@
     "hero": "assets/embakasiwarehouse.jpg",
     "thumbnail": "assets/embakasiwarehouse.jpg",
     "description": "Modern warehouse facility located in a strategic commercial area, ideal for logistics, storage and business operations.",
-"features": [
-  "High Ceiling Clearance",
-  "Loading Bay",
-  "24/7 Security",
-  "Ample Parking"
-],
+    "features": [
+      "High Ceiling Clearance",
+      "Loading Bay",
+      "24/7 Security",
+      "Ample Parking"
+    ],
     "gallery": [
       "assets/embakasiwarehouse.jpg",
       "assets/embakasiwarehouseimage2.jpg",
@@ -410,12 +410,12 @@
     "hero": "assets/ruiruwarehouse.jpg",
     "thumbnail": "assets/ruiruwarehouse.jpg",
     "description": "Functional warehouse space with excellent accessibility, suitable for inventory management, storage and distribution needs.",
-"features": [
-  "Large Floor Space",
-  "Wide Access Roads",
-  "Secure Compound",
-  "Power and Water Connected"
-],
+    "features": [
+      "Large Floor Space",
+      "Wide Access Roads",
+      "Secure Compound",
+      "Power and Water Connected"
+    ],
     "gallery": [
       "assets/ruiruwarehouse.jpg",
       "assets/ruiruwarehouseimage2.jpg"
@@ -434,12 +434,12 @@
     "hero": "assets/lavington warehouse.jpg",
     "thumbnail": "assets/lavington warehouse.jpg",
     "description": "Well-positioned warehouse suitable for storage, distribution and light industrial operations with convenient transport access.",
-"features": [
-  "Spacious Storage Area",
-  "Easy Truck Access",
-  "Secure Premises",
-  "Reliable Utilities"
-],
+    "features": [
+      "Spacious Storage Area",
+      "Easy Truck Access",
+      "Secure Premises",
+      "Reliable Utilities"
+    ],
     "gallery": [
       "assets/lavington warehouse.jpg"
     ]
